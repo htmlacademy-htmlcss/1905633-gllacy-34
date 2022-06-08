@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Артем Амеров](https://up.htmlacademy.ru/htmlcss/34/user/1905633).
-* Наставник: [Виктория Никитина] (https://htmlacademy.ru/profile/id1217273).
+* Наставник: [Виктория Никитина](https://htmlacademy.ru/profile/id1217273).
 
 ---
 
