@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Глейси</title>
+  </head>
+
+  <body class="catalog-body">
+    <div class="catalog-body__container">
+      <header class="header">
+        <span class="header__logo">Logo placeholder</span>
+        <nav class="header__navigation">
+          <ul class="header-menu list">
+            <li class="header-menu__item">
+              <a href="" class="header-menu__text header-menu__text--selected">Каталог</a>
+            </li>
+            <li class="header-menu__item">
+              <a href="" class="header-menu__text">Доставка и оплата</a>
+            </li>
+            <li class="header-menu__item">
+              <a href="" class="header-menu__text">О компании</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__popup-container">
+          <a href="tel:78005558628">+7 800 555-86-28</a>
+          <button class="header__search-button" type="button">Поиск</button>
+          <button class="header__login-button" type="button">Вход</button>
+          <button class="header__basket-button" type="button">2 товара</button>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="breadcrumbs">
+          <h2 class="breadcrumbs__caption visually-hidden">Навигация</h2>
+          <ul class="breadcrumbs__list list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link breadcrumbs__link--selected" href="">Каталог</a>
+            </li>
+          </ul>
+        </section>
+        <h1 class="catalog-caption visually-hidden">Сливочное мороженое</h1>
+        <section class="filter">
+          <form class="filter__form" action="https://echo.htmlacademy.ru/">
+            <div class="filter__sorting">
+              <label class="filter__sorting-caption" for="sorting">Сортировка:</label>
+              <select name="filter__sorting-dropdown" id="sorting">
+                <option class="filter__sorting-option" value="popular" selected>По популярности</option>
+                <option class="filter__sorting-option" value="from-cheap">От дешёвых к дорогим</option>
+                <option class="filter__sorting-option" value="from-expensive">От дорогих к дешёвым</option>
+              </select>
+            </div>
+            <div class="filter__price min-price">
+              <p class="filter__price-caption">Цена: 100 ₽ – 500 ₽</p>
+              <div class="filter__price-slider">
+                <button class="filter__price-button low-range-button" type="button"></button>
+                <button class="filter__price-button high-range-button" type="button"></button>
+              </div>
+            </div>
+            <div class="filter__price max-price">
+              <p class="filter__price-caption">Цена: 100 ₽ – 500 ₽</p>
+              <div class="filter__price-slider">
+                <button class="filter__price-button low-range-button" type="button"></button>
+                <button class="filter__price-button high-range-button" type="button"></button>
+              </div>
+            </div>
+            <div class="filter__fat fat">
+              <p class="fat__caption">Жирность:</p>
+              <ul class="fat__list">
+                <li class="fat__item">
+                  <input class="fat__radio" type="radio" name="fat-0" id="fat-0">
+                  <label class="fat__label" for="fat-0">0%</label>
+                </li>
+                <li class="fat__item">
+                  <input class="fat__radio" type="radio" name="fat-below-10" id="fat-below-10" checked>
+                  <label class="fat__label" for="fat-below-10">до 10%</label>
+                </li>
+                <li class="fat__item">
+                  <input class="fat__radio" type="radio" name="fat-below-30" id="fat-below-30">
+                  <label class="fat__label" for="fat-below-30">до 30%</label>
+                </li>
+                <li class="fat__item">
+                  <input class="fat__radio" type="radio" name="fat-over-30" id="fat-over-30">
+                  <label class="fat__label" for="fat-over-30">выше 30% </label>
+                </li>
+              </ul>
+            </div>
+            <div class="filter__filling fill">
+              <p class="fill__caption">Наполнители:</p>
+              <ul class="fill__list">
+                <li class="fill__item">
+                  <input class="fill__checkbox" type="checkbox" id="chokolate" name="chocolate" checked>
+                  <label class="fill__label" for="chocolate">шоколадные</label>
+                </li>
+                <li class="fill__item">
+                  <input class="fill__checkbox" type="checkbox" id="sugar" name="sugar" checked>
+                  <label class="fill__label" for="sugar">сахарные посыпки</label>
+                </li>
+                <li class="fill__item">
+                  <input class="fill__checkbox" type="checkbox" id="fruit" name="fruit">
+                  <label class="fill__label" for="fruit">фрукты</label>
+                </li>
+                <li class="fill__item">
+                  <input class="fill__checkbox" type="checkbox" id="syrop" name="syrop">
+                  <label class="fill__label" for="syrop">сиропы</label>
+                </li>
+                <li class="fill__item">
+                  <input class="fill__checkbox" type="checkbox" id="jam" name="jam">
+                  <label class="fill__label" for="jam">джемы</label>
+                </li>
+              </ul>
+            </div>
+            <button class="filter__button button" type="submit">Применить</button>
+          </form>
+        </section>
+        <section class="catalog-gallery shop">
+          <!-- Карточек пока что 4, потом добавлю остальные 8 -->
+          <ul class="shop__list list">
+            <li class="shop__card">
+              <img class="shop__preview-image" src="" alt="Малинка">
+              <h4 class="shop__caption">Малинка</h4>
+              <p class="shop__description">Сливочное мороженое с малиновым джемом</p>
+              <p class="shop__price">310 ₽/кг</p>
+              <button class="shop__button" type="button"></button>
+            </li>
+            <li class="shop__card">
+              <img class="shop__preview-image" src="" alt="Фисташка">
+              <h4 class="shop__caption">Фисташка</h4>
+              <p class="shop__description">Фисташковый пломбир с кусочками шоколада</p>
+              <p class="shop__price">340 ₽/кг</p>
+              <button class="shop__button" type="button"></button>
+            </li>
+            <li class="shop__card">
+              <img class="shop__preview-image" src="" alt="Черника">
+              <h4 class="shop__caption">Черника</h4>
+              <p class="shop__description">Крем-брюле
+                с черничным джемом</p>
+              <p class="shop__price">330 ₽/кг</p>
+              <button class="shop__button" type="button"></button>
+            </li>
+            <li class="shop__card">
+              <img class="shop__preview-image" src="" alt="Бабл-гам">
+              <h4 class="shop__caption">Бабл-гам</h4>
+              <p class="shop__description">Ванильный пломбир
+                со сладкой посыпкой</p>
+              <p class="shop__price">320 ₽/кг</p>
+              <button class="shop__button" type="button"></button>
+            </li>
+          </ul>
+          <button class="catalog-gallery__button button">Показать еще</button>
+          <div class="catalog-gallery__pagination pagination">
+            <ul class="pagination__list">
+              <li class="pagination__item">
+                <a class="pagination__link pagination__link--inactive" href=""><</a>
+                <a class="pagination__link" href="">1</a>
+                <a class="pagination__link" href="">2</a>
+                <a class="pagination__link pagination__link--selected" href="">3</a>
+                <a class="pagination__link" href="">4</a>
+                <a class="pagination__link" href="">5</a>
+                <a class="pagination__link" href="">></a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__social-container">
+          <ul class="social-list list">
+            <li class="social-list__item">
+              <a class="social-list__link telegram-link" href="https://t.me/htmlacademy"></a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link vk-link" href="https://vk.com/htmlacademy"></a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link youtube-link" href="https://www.youtube.com/user/htmlacademyru"></a>
+            </li>
+          </ul>
+        </div>
+        <ul class="footer__additional-info-list additional-info list">
+          <li class="additional-info__item">
+            <a class="additional-info__link additional-info__link--highlighted" href="">Для поставщиков</a>
+          </li>
+          <li class="additional-info__item">
+            <a class="additional-info__link" href="">Наши документы</a>
+          </li>
+          <li class="additional-info__item">
+            <a class="additional-info__link" href="">О производстве</a>
+          </li>
+          <li class="additional-info__item">
+            <a class="additional-info__link" href="">Экологические стандарты</a>
+          </li>
+        </ul>
+        <div class="credentials">
+          <a class="credentials__logo-link" href="https://htmlacademy.ru/"><span class="credentials__logo">Academy logo
+              placeholder</span></a>
+          <p class="credentials__signature">Сделано в <a class="credentials__text-link"
+              href="https://htmlacademy.ru/">.html academy</a> © 2021</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+
+</html>
