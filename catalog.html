@@ -4,39 +4,42 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
   </head>
 
   <body class="catalog-body">
     <div class="catalog-body__container">
       <header class="header">
-        <a href="index.html">
-          <img src="images/Logo.svg" alt="На главную страницу Gllacy" width="137px" height="56px">
-        </a>
-        <nav class="header__navigation">
-          <ul class="header-menu list">
-            <li class="header-menu__item">
-              <a href="#" class="header-menu__text header-menu__text--selected">Каталог</a>
-            </li>
-            <li class="header-menu__item">
-              <a href="#" class="header-menu__text">Доставка и оплата</a>
-            </li>
-            <li class="header-menu__item">
-              <a href="#" class="header-menu__text">О компании</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="header__popup-container">
-          <a href="tel:78005558628">+7 800 555-86-28</a>
+        <div class="header__left-part">
+          <a class="header__logo link" href="index.html">
+            <img src="images/Logo.svg" alt="На главную страницу Gllacy" width="137px" height="56px">
+          </a>
+          <nav class="header__navigation">
+            <ul class="header-menu list">
+              <li class="header-menu__item header-menu__item--selected">
+                <a href="#" class="link header-menu__text header-menu__text">Каталог</a>
+              </li>
+              <li class="header-menu__item">
+                <a href="#" class="link header-menu__text">Доставка и оплата</a>
+              </li>
+              <li class="header-menu__item">
+                <a href="#" class="link header-menu__text">О компании</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__right-part">
           <div class="header__popup-container">
-            <a href="tel:78005558628">+7 800 555-86-28</a>
+            <a class="header__phone link" href="tel:78005558628">+7 800 555-86-28</a>
             <div class="header__search-container">
-              <a href="#" class="header__search-button">Поиск</a>
+              <a href="#" class="link header__search-button">Поиск</a>
             </div>
             <div class="header__login-container">
-              <a href="#" class="header__login-button">Вход</a>
+              <a href="#" class="link header__login-button">Вход</a>
             </div>
             <div class="header__basket-container">
-              <a href="#" class="header__basket-button">2 товара</a>
+              <a href="#" class="link header__basket-button">2 товара</a>
             </div>
           </div>
         </div>
@@ -47,10 +50,10 @@
           <h2 class="breadcrumbs__caption visually-hidden">Навигация</h2>
           <ul class="breadcrumbs__list list">
             <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">Главная</a>
+              <a class="link breadcrumbs__link" href="#">Главная</a>
             </li>
             <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link breadcrumbs__link--selected" href="#">Каталог</a>
+              <a class="link breadcrumbs__link breadcrumbs__link--selected" href="#">Каталог</a>
             </li>
           </ul>
         </section>
@@ -81,7 +84,7 @@
             </div>
             <div class="filter__fat fat">
               <p class="fat__caption">Жирность:</p>
-              <ul class="fat__list">
+              <ul class="fat__list list">
                 <li class="fat__item">
                   <input class="fat__radio" type="radio" name="fat-level" id="fat-0">
                   <label class="fat__label" for="fat-0">0%</label>
@@ -102,7 +105,7 @@
             </div>
             <div class="filter__filling fill">
               <p class="fill__caption">Наполнители:</p>
-              <ul class="fill__list">
+              <ul class="fill__list list">
                 <li class="fill__item">
                   <input class="fill__checkbox" type="checkbox" id="chokolate" name="chocolate" checked>
                   <label class="fill__label" for="chocolate">шоколадные</label>
@@ -136,14 +139,14 @@
               <h4 class="shop__caption">Малинка</h4>
               <p class="shop__description">Сливочное мороженое с малиновым джемом</p>
               <p class="shop__price">310 ₽/кг</p>
-              <a class="shop__button" href="#">Добавить в корзину</a>
+              <a class="link shop__button" href="#">Добавить в корзину</a>
             </li>
             <li class="shop__card">
               <img class="shop__preview-image" src="images/ball2.png" alt="Фисташка" width="168px" height="168px">
               <h4 class="shop__caption">Фисташка</h4>
               <p class="shop__description">Фисташковый пломбир с кусочками шоколада</p>
               <p class="shop__price">340 ₽/кг</p>
-              <a class="shop__button" href="#">Добавить в корзину</a>
+              <a class="link shop__button" href="#">Добавить в корзину</a>
             </li>
             <li class="shop__card">
               <img class="shop__preview-image" src="images/ball3.png" alt="Черника" width="168px" height="168px">
@@ -151,7 +154,7 @@
               <p class="shop__description">Крем-брюле
                 с черничным джемом</p>
               <p class="shop__price">330 ₽/кг</p>
-              <a class="shop__button" href="#">Добавить в корзину</a>
+              <a class="link shop__button" href="#">Добавить в корзину</a>
             </li>
             <li class="shop__card">
               <img class="shop__preview-image" src="images/ball4.png" alt="Бабл-гам" width="168px" height="168px">
@@ -159,20 +162,20 @@
               <p class="shop__description">Ванильный пломбир
                 со сладкой посыпкой</p>
               <p class="shop__price">320 ₽/кг</p>
-              <a class="shop__button" href="#">Добавить в корзину</a>
+              <a class="link shop__button" href="#">Добавить в корзину</a>
             </li>
           </ul>
           <a class="catalog-gallery__button button" href="#">Показать еще</a>
           <div class="catalog-gallery__pagination pagination">
-            <ul class="pagination__list">
+            <ul class="pagination__list list">
               <li class="pagination__item">
-                <a class="pagination__link pagination__link--inactive" href="#"><</a>
-                <a class="pagination__link" href="#">1</a>
-                <a class="pagination__link" href="#">2</a>
-                <a class="pagination__link pagination__link--selected" href="#">3</a>
-                <a class="pagination__link" href="#">4</a>
-                <a class="pagination__link" href="#">5</a>
-                <a class="pagination__link" href="#">></a>
+                <a class="link pagination__link pagination__link--inactive" href="#"><</a>
+                    <a class="link pagination__link" href="#">1</a>
+                    <a class="link pagination__link" href="#">2</a>
+                    <a class="link pagination__link pagination__link--selected" href="#">3</a>
+                    <a class="link pagination__link" href="#">4</a>
+                    <a class="link pagination__link" href="#">5</a>
+                    <a class="link pagination__link" href="#">></a>
               </li>
             </ul>
           </div>
@@ -183,34 +186,34 @@
         <div class="footer__social-container">
           <ul class="social-list list">
             <li class="social-list__item">
-              <a class="social-list__link telegram-link" href="https://t.me/htmlacademy">Telegram</a>
+              <a class="link social-list__link telegram-link" href="https://t.me/htmlacademy">Telegram</a>
             </li>
             <li class="social-list__item">
-              <a class="social-list__link vk-link" href="https://vk.com/htmlacademy">VK</a>
+              <a class="link social-list__link vk-link" href="https://vk.com/htmlacademy">VK</a>
             </li>
             <li class="social-list__item">
-              <a class="social-list__link youtube-link" href="https://www.youtube.com/user/htmlacademyru">Youtube</a>
+              <a class="link social-list__link youtube-link" href="https://www.youtube.com/user/htmlacademyru">Youtube</a>
             </li>
           </ul>
         </div>
         <ul class="footer__additional-info-list additional-info list">
           <li class="additional-info__item">
-            <a class="additional-info__link additional-info__link--highlighted" href="#">Для поставщиков</a>
+            <a class="link additional-info__link additional-info__link--highlighted" href="#">Для поставщиков</a>
           </li>
           <li class="additional-info__item">
-            <a class="additional-info__link" href="#">Наши документы</a>
+            <a class="link additional-info__link" href="#">Наши документы</a>
           </li>
           <li class="additional-info__item">
-            <a class="additional-info__link" href="#">О производстве</a>
+            <a class="link additional-info__link" href="#">О производстве</a>
           </li>
           <li class="additional-info__item">
-            <a class="additional-info__link" href="#">Экологические стандарты</a>
+            <a class="link additional-info__link" href="#">Экологические стандарты</a>
           </li>
         </ul>
         <div class="credentials">
-          <a class="credentials__logo-link" href="https://htmlacademy.ru/"><span class="credentials__logo">Academy logo
+          <a class="link credentials__logo-link" href="https://htmlacademy.ru/"><span class="credentials__logo">Academy logo
               placeholder</span></a>
-          <p class="credentials__signature">Сделано в <a class="credentials__text-link"
+          <p class="credentials__signature">Сделано в <a class="link credentials__text-link"
               href="https://htmlacademy.ru/">.html academy</a> © 2021</p>
         </div>
       </footer>

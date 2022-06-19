@@ -4,37 +4,43 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
   </head>
 
   <body class="index-body">
     <div class="index-body__container">
       <header class="header">
-        <a href="index.html">
-          <img src="images/Logo.svg" alt="На главную страницу Gllacy" width="137px" height="56px">
-        </a>
-        <nav class="header__navigation">
-          <ul class="header-menu list">
-            <li class="header-menu__item">
-              <a href="#" class="header-menu__text">Каталог</a>
-            </li>
-            <li class="header-menu__item">
-              <a href="#" class="header-menu__text">Доставка и оплата</a>
-            </li>
-            <li class="header-menu__item">
-              <a href="#" class="header-menu__text">О компании</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="header__popup-container">
-          <a href="tel:78005558628">+7 800 555-86-28</a>
-          <div class="header__search-container">
-            <a href="#" class="header__search-button">Поиск</a>
-          </div>
-          <div class="header__login-container">
-            <a href="#" class="header__login-button">Вход</a>
-          </div>
-          <div class="header__basket-container">
-            <a href="#" class="header__basket-button">2 товара</a>
+        <div class="header__left-part">
+          <a class="header__logo link" href="index.html">
+            <img src="images/Logo.svg" alt="На главную страницу Gllacy" width="137px" height="56px">
+          </a>
+          <nav class="header__navigation">
+            <ul class="header-menu list">
+              <li class="header-menu__item">
+                <a href="#" class="link header-menu__text">Каталог</a>
+              </li>
+              <li class="header-menu__item">
+                <a href="#" class="link header-menu__text">Доставка и оплата</a>
+              </li>
+              <li class="header-menu__item">
+                <a href="#" class="link header-menu__text">О компании</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__right-part">
+          <div class="header__popup-container">
+            <a class="header__phone link" href="tel:78005558628">+7 800 555-86-28</a>
+            <div class="header__search-container">
+              <a href="#" class="link header__search-button">Поиск</a>
+            </div>
+            <div class="header__login-container">
+              <a href="#" class="link header__login-button">Вход</a>
+            </div>
+            <div class="header__basket-container">
+              <a href="#" class="link header__basket-button">2 товара</a>
+            </div>
           </div>
         </div>
       </header>
@@ -44,23 +50,28 @@
         <section class="slider">
 
 
-          <ul class="slider__list">
+          <ul class="slider__list list">
             <li class="slider__item">
-              <h3 class="slider__caption">Нежный пломбир с клубничным джемом</h3>
-              <p class="slider__description">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным
-                джемом
-                – это идеальный десерт для
-                всей семьи.</p>
-              <a class="slider__order-button button" href="#">Заказать</a>
-              <img class="slider__preview" src="images/Icecream1.png" alt="Клубничный пломбир" width="306px" height="507px">
-              <img class="slider__miniature1" src="images/Icecream2.png" alt="Сливочное мороженое со вкусом банана" width="66px" height="150px">
-              <img class="slider__miniature2" src="images/Icecream3.png" alt="Карамельный пломбир" width="66px" height="150px">
+              <div class="slider__text-container">
+                <h3 class="slider__caption">Нежный пломбир с клубничным джемом</h3>
+                <p class="slider__description">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным
+                  джемом
+                  – это идеальный десерт для
+                  всей семьи.</p>
+                <a class="link slider__order-button button" href="#">Заказать</a>
+              </div>
+                <img class="slider__preview" src="images/Icecream1.png" alt="Клубничный пломбир" width="306px"
+                  height="507px">
+              <img class="slider__miniature" src="images/Icecream2.png" alt="Сливочное мороженое со вкусом банана"
+                width="66px" height="150px">
+              <img class="slider__miniature" src="images/Icecream3.png" alt="Карамельный пломбир" width="66px"
+                height="150px">
             </li>
             <li class="slider__item visually-hidden">
               <h3 class="slider__caption">Сливочное мороженое со вкусом банана</h3>
               <p class="slider__description">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и
                 наслаждение даже в самый жаркий летний день. </p>
-              <a class="slider__order-button button" href="#">Заказать</a>
+              <a class="link slider__order-button button" href="#">Заказать</a>
               <img class="slider__preview" src="" alt="Сливочное мороженое со вкусом банана">
               <img class="slider__miniature1" src="" alt="Карамельный пломбир">
               <img class="slider__miniature2" src="" alt="Клубничный пломбир">
@@ -70,7 +81,7 @@
                 с маршмеллоу</h3>
               <p class="slider__description">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет
                 сердца сладкоежек всех возрастов.</p>
-              <a class="slider__order-button button" href="#">Заказать</a>
+              <a class="link slider__order-button button" href="#">Заказать</a>
               <img class="slider__preview" src="" alt="Карамельный пломбир">
               <img class="slider__miniature1" src="" alt="Клубничный пломбир">
               <img class="slider__miniature2" src="" alt="Сливочное мороженое со вкусом банана">
@@ -80,29 +91,32 @@
           <button class="slider__image-switch-button next" type="button">Следующее</button>
 
 
-          <ul class="slider__navigation-marker-list marker-list list">
-            <li class="marker-list__item">
-              <button class="marker-list__button" type="button">Клубничный пломбир</button>
-            </li>
-            <li class="marker-list__item">
-              <button class="marker-list__button" type="button">Сливочное мороженое со вкусом банана</button>
-            </li>
-            <li class="marker-list__item">
-              <button class="marker-list__button" type="button">Карамельный пломбир</button>
-            </li>
-          </ul>
-          <div class="slider__social">
-            <ul class="social-list list">
-              <li class="social-list__item">
-                <a class="social-list__link telegram-link" href="https://t.me/htmlacademy">Telegram</a>
+          <div class="slider__bottom-container">
+            <ul class="slider__navigation-marker-list marker-list list">
+              <li class="marker-list__item">
+                <button class="marker-list__button marker-list__button--active" type="button">Клубничный пломбир</button>
               </li>
-              <li class="social-list__item">
-                <a class="social-list__link vk-link" href="https://vk.com/htmlacademy">VK</a>
+              <li class="marker-list__item">
+                <button class="marker-list__button" type="button">Сливочное мороженое со вкусом банана</button>
               </li>
-              <li class="social-list__item">
-                <a class="social-list__link youtube-link" href="https://www.youtube.com/user/htmlacademyru">Youtube</a>
+              <li class="marker-list__item">
+                <button class="marker-list__button" type="button">Карамельный пломбир</button>
               </li>
             </ul>
+            <div class="slider__social">
+              <ul class="social-list list">
+                <li class="social-list__item">
+                  <a class="link social-list__link telegram-link" href="https://t.me/htmlacademy">Telegram</a>
+                </li>
+                <li class="social-list__item">
+                  <a class="link social-list__link vk-link" href="https://vk.com/htmlacademy">VK</a>
+                </li>
+                <li class="social-list__item">
+                  <a class="link social-list__link youtube-link"
+                    href="https://www.youtube.com/user/htmlacademyru">Youtube</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
         <section class="gifts">
@@ -112,13 +126,13 @@
               <h3 class="gifts__offer-caption">Малинка даром!</h3>
               <p class="gifts__offer-description">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ
                 банку малинового варенья бесплатно.</p>
-              <a class="gifts__button button" href="#">Хочу подарок</a>
+              <a class="link gifts__button button" href="#">Хочу подарок</a>
             </li>
             <li class="gifts__item">
               <h3 class="gifts__offer-caption">Маршмеллоу даром!</h3>
               <p class="gifts__offer-description">При покупке 2 кг пломбира добавимв ваш заказ упаковку нежных зефирок
                 совершенно бесплатно.</p>
-              <a class="gifts__button button" href="#">Хочу подарок</a>
+              <a class="link gifts__button button" href="#">Хочу подарок</a>
             </li>
           </ul>
         </section>
@@ -131,14 +145,14 @@
                 <h4 class="shop__caption">Малинка</h4>
                 <p class="shop__description">Сливочное мороженое с малиновым джемом</p>
                 <p class="shop__price">310 ₽/кг</p>
-                <a class="shop__button" href="#">Добавить в корзину</a>
+                <a class="link shop__button" href="#">Добавить в корзину</a>
               </li>
               <li class="shop__card">
                 <img class="shop__preview-image" src="images/ball2.png" alt="Фисташка" width="168px" height="168px">
                 <h4 class="shop__caption">Фисташка</h4>
                 <p class="shop__description">Фисташковый пломбир с кусочками шоколада</p>
                 <p class="shop__price">340 ₽/кг</p>
-                <a class="shop__button" href="#">Добавить в корзину</a>
+                <a class="link shop__button" href="#">Добавить в корзину</a>
               </li>
               <li class="shop__card">
                 <img class="shop__preview-image" src="images/ball3.png" alt="Черника" width="168px" height="168px">
@@ -146,7 +160,7 @@
                 <p class="shop__description">Крем-брюле
                   с черничным джемом</p>
                 <p class="shop__price">330 ₽/кг</p>
-                <a class="shop__button" href="#">Добавить в корзину</a>
+                <a class="link shop__button" href="#">Добавить в корзину</a>
               </li>
               <li class="shop__card">
                 <img class="shop__preview-image" src="images/ball4.png" alt="Бабл-гам" width="168px" height="168px">
@@ -154,7 +168,7 @@
                 <p class="shop__description">Ванильный пломбир
                   со сладкой посыпкой</p>
                 <p class="shop__price">320 ₽/кг</p>
-                <a class="shop__button" href="#">Добавить в корзину</a>
+                <a class="link shop__button" href="#">Добавить в корзину</a>
               </li>
             </ul>
           </div>
@@ -194,7 +208,7 @@
         </section>
         <section class="media">
           <h2 class="media__caption visually-hidden">Блог и рассылка</h2>
-          <ul class="media__list">
+          <ul class="media__list list">
             <li class="media__item blog">
               <p class="blog__new">Новое в нашем блоге</p>
               <p class="blog__caption">10 способов сервировки фруктовых щербетов
@@ -221,7 +235,7 @@
           <form class="delivery__form order-form" action="https://echo.htmlacademy.ru/" method="get">
             <p class="order-form__tooltip">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.
             </p>
-            <ul class="order-form__list">
+            <ul class="order-form__list list">
               <li class="order-form__item">
                 <label class="order-form__label date-label" for="date"></label>
                 <input class="order-form__input date-input" name="delivery-date" id="date" type="text"
@@ -245,14 +259,14 @@
           <h2 class="contacts__caption visually-hidden">Контакты</h2>
           <div class="contacts__wrapper">
             <p class="contacts__address-caption">Адрес главного офиса и офлайн-магазина:</p>
-            <a class="contacts__address-description" href="https://goo.gl/maps/nBJRtgVDgJTByFN49">
+            <a class="link contacts__address-description" href="https://goo.gl/maps/nBJRtgVDgJTByFN49">
               <address>
                 наб. реки Карповки, 5
                 лит П, Санкт-Петербург
               </address>
             </a>
             <p class="contacts__phone-caption">Для заказов по телефону:</p>
-            <a class="contacts__phone-description" href="tel:78005558628">+7 (812) 812-12-12</a>
+            <a class="link contacts__phone-description" href="tel:78005558628">+7 (812) 812-12-12</a>
             <p class="contacts__phone-details">(с 10 до 20 ежедневно)</p>
             <button class="contacts__button button" type="button">Форма обратной связи</button>
           </div>
@@ -262,13 +276,14 @@
         <div class="footer__social-container">
           <ul class="social-list list">
             <li class="social-list__item">
-              <a class="social-list__link telegram-link" href="https://t.me/htmlacademy">Telegram</a>
+              <a class="link social-list__link telegram-link" href="https://t.me/htmlacademy">Telegram</a>
             </li>
             <li class="social-list__item">
-              <a class="social-list__link vk-link" href="https://vk.com/htmlacademy">VK</a>
+              <a class="link social-list__link vk-link" href="https://vk.com/htmlacademy">VK</a>
             </li>
             <li class="social-list__item">
-              <a class="social-list__link youtube-link" href="https://www.youtube.com/user/htmlacademyru">Youtube</a>
+              <a class="link social-list__link youtube-link"
+                href="https://www.youtube.com/user/htmlacademyru">Youtube</a>
             </li>
           </ul>
         </div>
@@ -277,23 +292,40 @@
             <a class="additional-info__link additional-info__link--highlighted" href="#">Для поставщиков</a>
           </li>
           <li class="additional-info__item">
-            <a class="additional-info__link" href="#">Наши документы</a>
+            <a class="link additional-info__link" href="#">Наши документы</a>
           </li>
           <li class="additional-info__item">
-            <a class="additional-info__link" href="#">О производстве</a>
+            <a class="link additional-info__link" href="#">О производстве</a>
           </li>
           <li class="additional-info__item">
-            <a class="additional-info__link" href="#">Экологические стандарты</a>
+            <a class="link additional-info__link" href="#">Экологические стандарты</a>
           </li>
         </ul>
         <div class="credentials">
-          <a class="credentials__logo-link" href="https://htmlacademy.ru/"><span class="credentials__logo">Academy logo
+          <a class="link credentials__logo-link" href="https://htmlacademy.ru/"><span class="credentials__logo">Academy
+              logo
               placeholder</span></a>
-          <p class="credentials__signature">Сделано в <a class="credentials__text-link"
+          <p class="credentials__signature">Сделано в <a class="link credentials__text-link"
               href="https://htmlacademy.ru/">.html academy</a> © 2021</p>
         </div>
       </footer>
     </div>
+
+    <script>
+      const sliderSorting = (slideNumber) => {
+        const imageList = ["a","b","c","d"];
+        const newList = imageList.slice(slideNumber);
+        for (let i = 0; i < slideNumber; i++) {
+          newList.push(imageList[i])
+        }
+        if (slideNumber >= imageList.length) {
+          return imageList;
+        }
+        return newList;
+      };
+      sliderSorting();
+    </script>
+
   </body>
 
 </html>
