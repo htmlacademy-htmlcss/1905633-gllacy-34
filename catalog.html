@@ -50,40 +50,33 @@
           <h2 class="breadcrumbs__caption visually-hidden">Навигация</h2>
           <ul class="breadcrumbs__list list">
             <li class="breadcrumbs__item">
-              <a class="link breadcrumbs__link" href="#">Главная</a>
+              <a class="link breadcrumbs__link" href="index.html">Главная</a>
             </li>
             <li class="breadcrumbs__item">
               <a class="link breadcrumbs__link breadcrumbs__link--selected" href="#">Каталог</a>
             </li>
           </ul>
         </section>
-        <h1 class="catalog-caption visually-hidden">Сливочное мороженое</h1>
+        <h1 class="catalog-caption">Сливочное мороженое</h1>
         <section class="filter">
           <form class="filter__form" action="https://echo.htmlacademy.ru/">
             <div class="filter__sorting">
-              <label class="filter__sorting-caption" for="sorting">Сортировка:</label>
-              <select name="filter__sorting-dropdown" id="sorting">
-                <option class="filter__sorting-option" value="popular" selected>По популярности</option>
+              <label class="filter__sorting-caption filter-caption" for="sorting">Сортировка:</label>
+              <select class="filter__sorting-dropdown" name="filter__sorting-dropdown" id="sorting">
+                <option class="filter__sorting-option" value="popular" selected>по популярности</option>
                 <option class="filter__sorting-option" value="from-cheap">От дешёвых к дорогим</option>
                 <option class="filter__sorting-option" value="from-expensive">От дорогих к дешёвым</option>
               </select>
             </div>
-            <div class="filter__price min-price">
-              <p class="filter__price-caption">Цена: 100 ₽ – 500 ₽</p>
-              <div class="filter__price-slider">
-                <button class="filter__price-button low-range-button" type="button">Нижняя граница</button>
-                <button class="filter__price-button high-range-button" type="button">Верхняя граница</button>
-              </div>
-            </div>
-            <div class="filter__price max-price">
-              <p class="filter__price-caption">Цена: 100 ₽ – 500 ₽</p>
+            <div class="filter__price">
+              <p class="filter__price-caption filter-caption">Цена: 100 ₽ – 500 ₽</p>
               <div class="filter__price-slider">
                 <button class="filter__price-button low-range-button" type="button">Нижняя граница</button>
                 <button class="filter__price-button high-range-button" type="button">Верхняя граница</button>
               </div>
             </div>
             <div class="filter__fat fat">
-              <p class="fat__caption">Жирность:</p>
+              <p class="fat__caption filter-caption">Жирность:</p>
               <ul class="fat__list list">
                 <li class="fat__item">
                   <input class="fat__radio" type="radio" name="fat-level" id="fat-0">
@@ -104,10 +97,10 @@
               </ul>
             </div>
             <div class="filter__filling fill">
-              <p class="fill__caption">Наполнители:</p>
+              <p class="fill__caption filter-caption">Наполнители:</p>
               <ul class="fill__list list">
                 <li class="fill__item">
-                  <input class="fill__checkbox" type="checkbox" id="chokolate" name="chocolate" checked>
+                  <input class="fill__checkbox" type="checkbox" id="chocolate" name="chocolate" checked>
                   <label class="fill__label" for="chocolate">шоколадные</label>
                 </li>
                 <li class="fill__item">
@@ -132,52 +125,172 @@
           </form>
         </section>
         <section class="catalog-gallery shop">
-          <!-- Карточек пока что 4, потом добавлю остальные 8 -->
           <ul class="shop__list list">
             <li class="shop__card">
               <img class="shop__preview-image" src="images/ball1.png" alt="Малинка" width="168px" height="168px">
-              <h4 class="shop__caption">Малинка</h4>
-              <p class="shop__description">Сливочное мороженое с малиновым джемом</p>
-              <p class="shop__price">310 ₽/кг</p>
-              <a class="link shop__button" href="#">Добавить в корзину</a>
+              <div class="shop__card-content-container">
+                <h4 class="shop__caption">Малинка</h4>
+                <p class="shop__description">Сливочное мороженое с малиновым джемом</p>
+                <div class="shop__price-container">
+                  <p class="shop__price">310 ₽/кг</p>
+                  <a class="link shop__button" href="#">Добавить в корзину</a>
+                </div>
+              </div>
             </li>
             <li class="shop__card">
               <img class="shop__preview-image" src="images/ball2.png" alt="Фисташка" width="168px" height="168px">
-              <h4 class="shop__caption">Фисташка</h4>
-              <p class="shop__description">Фисташковый пломбир с кусочками шоколада</p>
-              <p class="shop__price">340 ₽/кг</p>
-              <a class="link shop__button" href="#">Добавить в корзину</a>
+              <div class="shop__card-content-container">
+                <h4 class="shop__caption">Фисташка</h4>
+                <p class="shop__description">Фисташковый пломбир с кусочками шоколада</p>
+                <div class="shop__price-container">
+                  <p class="shop__price">340 ₽/кг</p>
+                  <a class="link shop__button" href="#">Добавить в корзину</a>
+                </div>
+              </div>
             </li>
             <li class="shop__card">
               <img class="shop__preview-image" src="images/ball3.png" alt="Черника" width="168px" height="168px">
-              <h4 class="shop__caption">Черника</h4>
-              <p class="shop__description">Крем-брюле
-                с черничным джемом</p>
-              <p class="shop__price">330 ₽/кг</p>
-              <a class="link shop__button" href="#">Добавить в корзину</a>
+              <div class="shop__card-content-container">
+                <h4 class="shop__caption">Черника</h4>
+                <p class="shop__description">Крем-брюле
+                  с черничным джемом</p>
+                <div class="shop__price-container">
+                  <p class="shop__price">330 ₽/кг</p>
+                  <a class="link shop__button" href="#">Добавить в корзину</a>
+                </div>
+              </div>
             </li>
             <li class="shop__card">
               <img class="shop__preview-image" src="images/ball4.png" alt="Бабл-гам" width="168px" height="168px">
-              <h4 class="shop__caption">Бабл-гам</h4>
-              <p class="shop__description">Ванильный пломбир
-                со сладкой посыпкой</p>
-              <p class="shop__price">320 ₽/кг</p>
-              <a class="link shop__button" href="#">Добавить в корзину</a>
+              <div class="shop__card-content-container">
+                <h4 class="shop__caption">Бабл-гам</h4>
+                <p class="shop__description">Ванильный пломбир
+                  со сладкой посыпкой</p>
+                <div class="shop__price-container">
+                  <p class="shop__price">320 ₽/кг</p>
+                  <a class="link shop__button" href="#">Добавить в корзину</a>
+                </div>
+              </div>
+            </li>
+            <li class="shop__card">
+              <img class="shop__preview-image" src="images/ball5.png" alt="Бабл-гам" width="168px" height="168px">
+              <div class="shop__card-content-container">
+                <h4 class="shop__caption">Ежевика</h4>
+                <p class="shop__description">Сливочное мороженое с ежевичным джемом</p>
+                <div class="shop__price-container">
+                  <p class="shop__price">330 ₽/кг</p>
+                  <a class="link shop__button" href="#">Добавить в корзину</a>
+                </div>
+              </div>
+            </li>
+            <li class="shop__card">
+              <img class="shop__preview-image" src="images/ball6.png" alt="Бабл-гам" width="168px" height="168px">
+              <div class="shop__card-content-container">
+                <h4 class="shop__caption">Банан</h4>
+                <p class="shop__description">Сливочный пломбир
+                  с банановым вкусом</p>
+                <div class="shop__price-container">
+                  <p class="shop__price">340 ₽/кг</p>
+                  <a class="link shop__button" href="#">Добавить в корзину</a>
+                </div>
+              </div>
+            </li>
+            <li class="shop__card">
+              <img class="shop__preview-image" src="images/ball7.png" alt="Бабл-гам" width="168px" height="168px">
+              <div class="shop__card-content-container">
+                <h4 class="shop__caption">Шоколадка</h4>
+                <p class="shop__description">Классический шоколадный пломбир</p>
+                <div class="shop__price-container">
+                  <p class="shop__price">270 ₽/кг</p>
+                  <a class="link shop__button" href="#">Добавить в корзину</a>
+                </div>
+              </div>
+            </li>
+            <li class="shop__card">
+              <img class="shop__preview-image" src="images/ball8.png" alt="Бабл-гам" width="168px" height="168px">
+              <div class="shop__card-content-container">
+                <h4 class="shop__caption">Клубничка</h4>
+                <p class="shop__description">Сливочный пломбир
+                  с клубничным вкусом</p>
+                <div class="shop__price-container">
+                  <p class="shop__price">300 ₽/кг</p>
+                  <a class="link shop__button" href="#">Добавить в корзину</a>
+                </div>
+              </div>
+            </li>
+            <li class="shop__card">
+              <img class="shop__preview-image" src="images/ball9.png" alt="Бабл-гам" width="168px" height="168px">
+              <div class="shop__card-content-container">
+                <h4 class="shop__caption">Лимон</h4>
+                <p class="shop__description">Освежающий лимонный сорбет</p>
+                <div class="shop__price-container">
+                  <p class="shop__price">310 ₽/кг</p>
+                  <a class="link shop__button" href="#">Добавить в корзину</a>
+                </div>
+              </div>
+            </li>
+            <li class="shop__card">
+              <img class="shop__preview-image" src="images/ball10.png" alt="Бабл-гам" width="168px" height="168px">
+              <div class="shop__card-content-container">
+                <h4 class="shop__caption">Ментол</h4>
+                <p class="shop__description">Сливочный пломбир
+                  с ментоловым сиропом</p>
+                <div class="shop__price-container">
+                  <p class="shop__price">320 ₽/кг</p>
+                  <a class="link shop__button" href="#">Добавить в корзину</a>
+                </div>
+              </div>
+            </li>
+            <li class="shop__card">
+              <img class="shop__preview-image" src="images/ball11.png" alt="Бабл-гам" width="168px" height="168px">
+              <div class="shop__card-content-container">
+                <h4 class="shop__caption">Орешек</h4>
+                <p class="shop__description">Фисташковый пломбир с шоколадным сиропом</p>
+                <div class="shop__price-container">
+                  <p class="shop__price">360 ₽/кг</p>
+                  <a class="link shop__button" href="#">Добавить в корзину</a>
+                </div>
+              </div>
+            </li>
+            <li class="shop__card">
+              <img class="shop__preview-image" src="images/ball12.png" alt="Бабл-гам" width="168px" height="168px">
+              <div class="shop__card-content-container">
+                <h4 class="shop__caption">Крем-брюле</h4>
+                <p class="shop__description">Классическое<br> крем-брюле</p>
+                <div class="shop__price-container">
+                  <p class="shop__price">280 ₽/кг</p>
+                  <a class="link shop__button" href="#">Добавить в корзину</a>
+                </div>
+              </div>
             </li>
           </ul>
-          <a class="catalog-gallery__button button" href="#">Показать еще</a>
-          <div class="catalog-gallery__pagination pagination">
-            <ul class="pagination__list list">
-              <li class="pagination__item">
-                <a class="link pagination__link pagination__link--inactive" href="#"><</a>
-                    <a class="link pagination__link" href="#">1</a>
-                    <a class="link pagination__link" href="#">2</a>
-                    <a class="link pagination__link pagination__link--selected" href="#">3</a>
-                    <a class="link pagination__link" href="#">4</a>
-                    <a class="link pagination__link" href="#">5</a>
-                    <a class="link pagination__link" href="#">></a>
-              </li>
-            </ul>
+          <div class="catalog-gallery__pagination-wrapper">
+            <a class="catalog-gallery__button button" href="#">Показать еще</a>
+            <div class="catalog-gallery__pagination pagination">
+              <ul class="pagination__list list">
+                <li class="pagination__item">
+                  <a class="link pagination__link pagination__link--inactive" href="#">Назад
+                </li>
+                <li class="pagination__item">
+                  <a class="link pagination__link" href="#">1</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="link pagination__link" href="#">2</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="link pagination__link pagination__link--selected" href="#">3</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="link pagination__link" href="#">4</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="link pagination__link" href="#">5</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="link pagination__link" href="#">Вперёд</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
       </main>
@@ -192,12 +305,13 @@
               <a class="link social-list__link vk-link" href="https://vk.com/htmlacademy">VK</a>
             </li>
             <li class="social-list__item">
-              <a class="link social-list__link youtube-link" href="https://www.youtube.com/user/htmlacademyru">Youtube</a>
+              <a class="link social-list__link youtube-link"
+                href="https://www.youtube.com/user/htmlacademyru">Youtube</a>
             </li>
           </ul>
         </div>
         <ul class="footer__additional-info-list additional-info list">
-          <li class="additional-info__item">
+          <li class="additional-info__item additional-info__item--heart">
             <a class="link additional-info__link additional-info__link--highlighted" href="#">Для поставщиков</a>
           </li>
           <li class="additional-info__item">
@@ -211,7 +325,8 @@
           </li>
         </ul>
         <div class="credentials">
-          <a class="link credentials__logo-link" href="https://htmlacademy.ru/"><span class="credentials__logo">Academy logo
+          <a class="link credentials__logo-link" href="https://htmlacademy.ru/"><span class="credentials__logo">Academy
+              logo
               placeholder</span></a>
           <p class="credentials__signature">Сделано в <a class="link credentials__text-link"
               href="https://htmlacademy.ru/">.html academy</a> © 2021</p>
