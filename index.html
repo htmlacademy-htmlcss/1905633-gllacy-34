@@ -6,6 +6,7 @@
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="favicon.ico">
+    <script src="js/script.js" type="module"></script>
   </head>
 
   <body class="index-body index-body--pink">
@@ -147,8 +148,9 @@
           <ul class="slider__list list">
             <li class="slider__item">
               <div class="slider__text-container">
-                <h3 class="slider__caption">Нежный пломбир с клубничным джемом</h3>
-                <p class="slider__description">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным
+                <h3 class="slider__caption">Нежный пломбир <br>с клубничным джемом</h3>
+                <p class="slider__description">Натуральное мороженое из свежих сливок <br>и молока с вкуснейшим
+                  клубничным
                   джемом
                   – это идеальный десерт для
                   всей семьи.</p>
@@ -158,18 +160,23 @@
                 height="507px">
             </li>
             <li class="slider__item slider__item--inactive">
-              <h3 class="slider__caption">Сливочное мороженое со вкусом банана</h3>
-              <p class="slider__description">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и
-                наслаждение даже в самый жаркий летний день. </p>
-              <a class="link slider__order-button button" href="#">Заказать</a>
+              <div class="slider__text-container">
+                <h3 class="slider__caption">Сливочное мороженое со вкусом банана</h3>
+                <p class="slider__description">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и
+                  наслаждение даже в самый жаркий летний день. </p>
+                <a class="link slider__order-button button" href="#">Заказать</a>
+              </div>
               <img class="slider__preview" src="images/Icecream2.png" alt="Карамельный пломбир">
             </li>
             <li class="slider__item slider__item--inactive">
-              <h3 class="slider__caption">Карамельный пломбир
-                с маршмеллоу</h3>
-              <p class="slider__description">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет
-                сердца сладкоежек всех возрастов.</p>
-              <a class="link slider__order-button button" href="#">Заказать</a>
+              <div class="slider__text-container">
+                <h3 class="slider__caption">Карамельный пломбир
+                  с маршмеллоу</h3>
+                <p class="slider__description">Необычный сладкий десерт с карамельным топпингом и кусочками зефира
+                  завоюет
+                  сердца сладкоежек всех возрастов.</p>
+                <a class="link slider__order-button button" href="#">Заказать</a>
+              </div>
               <img class="slider__preview" src="images/Icecream3.png" alt="Сливочное мороженое со вкусом банана">
             </li>
           </ul>
@@ -226,48 +233,56 @@
           <div class="gallery__shop shop">
             <ul class="shop__list list">
               <li class="shop__card">
-                <img class="shop__preview-image" src="images/ball1.png" alt="Малинка" width="168px" height="168px">
-                <div class="shop__card-content-container">
-                  <h4 class="shop__caption">Малинка</h4>
-                  <p class="shop__description">Сливочное мороженое с малиновым джемом</p>
-                  <div class="shop__price-container">
-                    <p class="shop__price">310 ₽/кг</p>
-                    <a class="link shop__button" href="#">Добавить в корзину</a>
+                <div class="shop__container">
+                  <img class="shop__preview-image" src="images/ball1.png" alt="Малинка" width="168px" height="168px">
+                  <div class="shop__card-content-container">
+                    <h4 class="shop__caption">Малинка</h4>
+                    <p class="shop__description">Сливочное мороженое с малиновым джемом</p>
+                    <div class="shop__price-container">
+                      <p class="shop__price">310 ₽/кг</p>
+                      <a class="link shop__button" href="#">Добавить в корзину</a>
+                    </div>
                   </div>
                 </div>
               </li>
               <li class="shop__card">
-                <img class="shop__preview-image" src="images/ball2.png" alt="Фисташка" width="168px" height="168px">
-                <div class="shop__card-content-container">
-                  <h4 class="shop__caption">Фисташка</h4>
-                  <p class="shop__description">Фисташковый пломбир с кусочками шоколада</p>
-                  <div class="shop__price-container">
-                    <p class="shop__price">340 ₽/кг</p>
-                    <a class="link shop__button" href="#">Добавить в корзину</a>
+                <div class="shop__container">
+                  <img class="shop__preview-image" src="images/ball2.png" alt="Фисташка" width="168px" height="168px">
+                  <div class="shop__card-content-container">
+                    <h4 class="shop__caption">Фисташка</h4>
+                    <p class="shop__description">Фисташковый пломбир с кусочками шоколада</p>
+                    <div class="shop__price-container">
+                      <p class="shop__price">340 ₽/кг</p>
+                      <a class="link shop__button" href="#">Добавить в корзину</a>
+                    </div>
                   </div>
                 </div>
               </li>
               <li class="shop__card">
-                <img class="shop__preview-image" src="images/ball3.png" alt="Черника" width="168px" height="168px">
-                <div class="shop__card-content-container">
-                  <h4 class="shop__caption">Черника</h4>
-                  <p class="shop__description">Крем-брюле
-                    с черничным джемом</p>
-                  <div class="shop__price-container">
-                    <p class="shop__price">330 ₽/кг</p>
-                    <a class="link shop__button" href="#">Добавить в корзину</a>
+                <div class="shop__container">
+                  <img class="shop__preview-image" src="images/ball3.png" alt="Черника" width="168px" height="168px">
+                  <div class="shop__card-content-container">
+                    <h4 class="shop__caption">Черника</h4>
+                    <p class="shop__description">Крем-брюле
+                      с черничным джемом</p>
+                    <div class="shop__price-container">
+                      <p class="shop__price">330 ₽/кг</p>
+                      <a class="link shop__button" href="#">Добавить в корзину</a>
+                    </div>
                   </div>
                 </div>
               </li>
               <li class="shop__card">
-                <img class="shop__preview-image" src="images/ball4.png" alt="Бабл-гам" width="168px" height="168px">
-                <div class="shop__card-content-container">
-                  <h4 class="shop__caption">Бабл-гам</h4>
-                  <p class="shop__description">Ванильный пломбир
-                    со сладкой посыпкой</p>
-                  <div class="shop__price-container">
-                    <p class="shop__price">320 ₽/кг</p>
-                    <a class="link shop__button" href="#">Добавить в корзину</a>
+                <div class="shop__container">
+                  <img class="shop__preview-image" src="images/ball4.png" alt="Бабл-гам" width="168px" height="168px">
+                  <div class="shop__card-content-container">
+                    <h4 class="shop__caption">Бабл-гам</h4>
+                    <p class="shop__description">Ванильный пломбир
+                      со сладкой посыпкой</p>
+                    <div class="shop__price-container">
+                      <p class="shop__price">320 ₽/кг</p>
+                      <a class="link shop__button" href="#">Добавить в корзину</a>
+                    </div>
                   </div>
                 </div>
               </li>
@@ -311,20 +326,24 @@
           <h2 class="media__caption visually-hidden">Блог и рассылка</h2>
           <ul class="media__list list">
             <li class="media__item blog">
-              <p class="blog__new">Новое в нашем блоге</p>
-              <p class="blog__caption">10 способов сервировки фруктовых щербетов
-                к столу</p>
+              <div class="blog__container">
+                <p class="blog__new">Новое в нашем блоге</p>
+                <p class="blog__caption">10 способов сервировки фруктовых щербетов
+                  к столу</p>
+              </div>
             </li>
             <li class="media__item subscription">
-              <div class="subscription__wrapper">
-                <p class="subscription__description">Подпишитесь на нашу сладкую рассылку и будьте всегда
-                  в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной
-                  ерунды. Честно =)</p>
-                <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="get">
-                  <input class="subscription__email" type="email" name="subscription-email"
-                    placeholder="email@example.com" required>
-                  <button class="subscription__button button button-red" type="submit">Отправить</button>
-                </form>
+              <div class="subscription__container">
+                <div class="subscription__wrapper">
+                  <p class="subscription__description">Подпишитесь на нашу сладкую рассылку и будьте всегда
+                    в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной
+                    ерунды. Честно =)</p>
+                  <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="get">
+                    <input class="subscription__email" type="email" name="subscription-email"
+                      placeholder="email@example.com" required>
+                    <button class="subscription__button button button-red" type="submit">Отправить</button>
+                  </form>
+                </div>
               </div>
             </li>
           </ul>
@@ -429,109 +448,6 @@
         </div>
       </footer>
     </div>
-
-    <!-- <script>
-      const sliderSorting = (slideNumber) => {
-        const imageList = ["a", "b", "c", "d"];
-        const newList = imageList.slice(slideNumber);
-        for (let i = 0; i < slideNumber; i++) {
-          newList.push(imageList[i])
-        }
-        if (slideNumber >= imageList.length) {
-          return imageList;
-        }
-        return newList;
-      };
-      sliderSorting();
-    </script> -->
-
-    <script>
-      const body = document.querySelector('body');
-      const contactsPopup = document.querySelector('.contacts__popup');
-      const toggleButton = document.querySelector('.contacts__button');
-      const outsideSpace = document.querySelector('.popup__container');
-      const menuButton = document.querySelector('.header-menu__catalogue');
-      const menuPopup = document.querySelector('.dropdown-menu');
-      const searchButton = document.querySelector('.header__search-container');
-      const searchPopup = document.querySelector('.search-popup');
-      const loginButton = document.querySelector('.header__login-container');
-      const loginPopup = document.querySelector('.login-popup');
-      const basketButton = document.querySelector('.header__basket-container');
-      const basketPopup = document.querySelector('.basket-popup');
-
-
-      const hideElementOnESC = (element, hideClass, button, highlightedClass) => {
-        const callbackOnEsc = (evt) => {
-          if (evt.key === 'Escape') {
-            element.classList.add(hideClass);
-            button.classList.remove(highlightedClass);
-            body.classList.remove('stop-scrolling');
-            document.removeEventListener('keydown', callbackOnEsc);
-          }
-        };
-        document.addEventListener('keydown', callbackOnEsc);
-      };
-
-      // const hideElementOnClickOutside = (clickElement, hideElement, hideClass) => {
-      //   toggleButton.addEventListener('click', (evt) => {
-      //     console.log("CLICK NA KNOPKU");
-      //     evt.stopPropagation();
-      //   });
-      //   body.addEventListener('click', () => {
-      //     hideElement.classList.add(hideClass);
-      //     console.log("CLICK NE W POLE");
-      //   });
-      //   clickElement.addEventListener('click', (evt) => {
-      //     evt.stopPropagation();
-      //     console.log("CLICK W POLE");
-      //   });
-      // };
-
-      const hideElementOnButtonClick = (element, hideClass) => {
-        const button = element.querySelector('.popup__close-button');
-        button.addEventListener('click', (evt) => {
-          evt.preventDefault();
-          element.classList.add(hideClass);
-          body.classList.remove('stop-scrolling');
-        });
-      };
-
-      toggleButton.addEventListener('click', function () {
-        body.classList.add('stop-scrolling');
-        contactsPopup.classList.remove('popup--closed');
-        hideElementOnESC(contactsPopup, 'popup--closed');
-        // hideElementOnClickOutside(outsideSpace, contactsPopup, 'popup--closed');
-        hideElementOnButtonClick(contactsPopup, 'popup--closed');
-      });
-
-      menuButton.addEventListener('click', function () {
-        menuPopup.classList.remove('popup--closed');
-        menuButton.classList.add('header-menu__item--selected');
-        hideElementOnESC(menuPopup, 'popup--closed', menuButton, 'header-menu__item--selected');
-        // hideElementOnClickOutside(outsideSpace, searchPopup, 'popup--closed');
-      });
-
-      searchButton.addEventListener('click', function () {
-        searchPopup.classList.remove('popup--closed');
-        hideElementOnESC(searchPopup, 'popup--closed');
-        // hideElementOnClickOutside(outsideSpace, searchPopup, 'popup--closed');
-      });
-
-      loginButton.addEventListener('click', function () {
-        loginPopup.classList.remove('popup--closed');
-        hideElementOnESC(loginPopup, 'popup--closed');
-        // hideElementOnClickOutside(outsideSpace, searchPopup, 'popup--closed');
-      });
-
-      basketButton.addEventListener('click', function () {
-        basketPopup.classList.remove('popup--closed');
-        hideElementOnESC(basketPopup, 'popup--closed');
-        // hideElementOnClickOutside(outsideSpace, searchPopup, 'popup--closed');
-      });
-
-
-
-    </script>
 
   </body>
 
