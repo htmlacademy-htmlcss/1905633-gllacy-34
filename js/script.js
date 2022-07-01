@@ -45,7 +45,7 @@ const hideElementOnClickOutside = (clickElement, hideElement, hideClass) => {
   // toggleButton.addEventListener('click', (evt) => {
   //   console.log("CLICK NA KNOPKU");
   //   evt.preventDefault()
-  // }); 
+  // });
   document.addEventListener('click', (evt) => {
     if (!evt.target.classList.contains('contacts__button') && evt.target.classList.contains('popup__window')) {
       hideElement.classList.add(hideClass);
