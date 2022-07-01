@@ -382,7 +382,6 @@ img {
 
 .header__basket-popup-empty {
   background-color: #FCFCFC;
-  width: 156px;
   position: absolute;
   top: 40px;
   right: 0;
@@ -1077,7 +1076,7 @@ img {
   background-image: url("../images/deliverybg.jpg");
   background-size: 1240px auto;
   background-repeat: no-repeat;
-  background-position: 0px -147px;
+  background-position: 0p -147px;
   border-radius: 16px;
   padding: 64px;
   padding-left: 100px;
