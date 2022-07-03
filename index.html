@@ -6,7 +6,7 @@
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="favicon.ico">
-    <script src="js/script.js" type="module"></script>
+    <script src="js/script-index.js" type="module"></script>
   </head>
 
   <body class="index-body index-body--pink">
@@ -19,7 +19,7 @@
           <nav class="header__navigation">
             <ul class="header-menu list">
               <li class="header-menu__item header-menu__catalogue">
-                <a href="#" class="link header-menu__text">Каталог</a>
+                <a href="#" class="link header-menu__text text-catalogue">Каталог</a>
 
                 <!-- Выпадающее меню -->
 
@@ -64,7 +64,8 @@
 
               <div class="header__search-container-popup search-popup popup--closed">
                 <form class="search-popup__form" action="https://echo.htmlacademy.ru/">
-                  <input class="search-popup__input" name="search-input" type="text" placeholder="Поиск по сайту">
+                  <input class="search-popup__input text-input" name="search-input" type="text"
+                    placeholder="Поиск по сайту">
                 </form>
               </div>
 
@@ -77,12 +78,12 @@
               <div class="header__login-popup login-popup popup--closed">
                 <p class="login-popup__caption">Личный кабинет</p>
                 <form class="login-popup__form" action="https://echo.htmlacademy.ru/">
-                  <input class="login-popup__input login-email" name="login-email" type="email"
+                  <input class="login-popup__input login-email text-input" name="login-email" type="email"
                     placeholder="email@example.com">
-                  <input class="login-popup__input login-password" name="login-password" type="password"
+                  <input class="login-popup__input login-password text-input" name="login-password" type="password"
                     placeholder="°°°°°°">
                   <div class="login-popup__bottom-container">
-                    <button class="login-popup__button button button-red" type="submit">Войти</button>
+                    <button class="login-popup__button button-red" type="submit">Войти</button>
                     <div class="login-popup__link-container">
                       <a class="login-popup__reminder login-popup__link link" href="#">Забыли пароль?</a>
                       <a class="login-popup__register login-popup__link link" href="#">Регистрация</a>
@@ -134,7 +135,7 @@
                   </li>
                 </ul>
                 <div class="basket-popup__bottom-container">
-                  <a class="basket-popup__order button button-red" href="#">Оформить заказ</a>
+                  <a class="basket-popup__order button-red" href="#">Оформить заказ</a>
                   <p class="basket-popup__grand-total">Итого: 790 ₽</p>
                 </div>
               </div>
@@ -339,9 +340,9 @@
                     в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной
                     ерунды. Честно =)</p>
                   <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="get">
-                    <input class="subscription__email" type="email" name="subscription-email"
-                      placeholder="email@example.com" required>
-                    <button class="subscription__button button button-red" type="submit">Отправить</button>
+                    <input class="subscription__email text-input" type="email" name="subscription-email"
+                      placeholder="email@example.com">
+                    <button class="subscription__button button-red" type="submit">Отправить</button>
                   </form>
                 </div>
               </div>
@@ -355,26 +356,28 @@
               Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
           </div>
           <form class="delivery__form order-form" action="https://echo.htmlacademy.ru/" method="get">
-            <p class="order-form__tooltip">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.
+            <p class="order-form__description">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.
             </p>
             <ul class="order-form__list list">
               <li class="order-form__item">
                 <label class="order-form__label date-label" for="date">Дата</label>
-                <input class="order-form__input date-input" name="delivery-date" id="date" type="text"
-                  onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="01.04.2020" required>
+                <p class="order-form__tooltip">Введите дату доставки</p>
+                <input class="order-form__input date-input text-input" name="delivery-date" id="date" type="text"
+                  onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="01.04.2020">
               </li>
               <li class="order-form__item">
                 <label class="order-form__label phone-label" for="phone">Телефон</label>
-                <input class="order-form__input phone-input" name="delivery-phone" id="phone" type="tel"
-                  placeholder="+7 800 999-00-00" required>
+                <input class="order-form__input phone-input text-input" name="delivery-phone" id="phone" type="tel"
+                  placeholder="+7 800 999-00-00">
               </li>
               <li class="order-form__item">
                 <label class="order-form__label email-label" for="email">Адрес</label>
-                <input class="order-form__input email-input" name="delivery-email" id="email" type="email"
-                  placeholder="ул. Большая Конюшенная, 19/8" required>
+                <p class="order-form__tooltip">Введите название улицы, дома и квартиры</p>
+                <input class="order-form__input email-input text-input" name="delivery-email" id="email" type="email"
+                  placeholder="ул. Большая Конюшенная, 19/8">
               </li>
             </ul>
-            <button class="order-form__button button button-red" type="submit">Отправить</button>
+            <button class="order-form__button button-red" type="submit">Отправить</button>
           </form>
         </section>
         <section class="contacts">
@@ -390,7 +393,7 @@
             <p class="contacts__phone-caption">Для заказов по телефону:</p>
             <a class="link contacts__phone-description" href="tel:78005558628">+7 (812) 812-12-12</a>
             <p class="contacts__phone-details">(с 10 до 20 ежедневно)</p>
-            <button class="contacts__button button button-red" type="button">Форма обратной связи</button>
+            <button class="contacts__button button-red" type="button">Форма обратной связи</button>
           </div>
           <div class="contacts__popup popup popup--closed">
             <div class="popup__container">
@@ -398,13 +401,13 @@
                 <h3 class="popup__caption">Мы обязательно ответим вам!</h3>
                 <button class="popup__close-button" type="button">Закрыть</button>
                 <form class="popup__form" action="https://echo.htmlacademy.ru/">
-                  <input class="popup__input grey-input" name="name-and-surname" type="text" placeholder="Имя и фамилия"
-                    required>
-                  <input class="popup__input grey-input" name="email" type="email" placeholder="email@example.com"
-                    required>
-                  <textarea class="popup__textarea" name="free-text" cols="30" rows="10"
+                  <input class="popup__input grey-input text-input" name="name-and-surname" type="text"
+                    placeholder="Имя и фамилия">
+                  <input class="popup__input grey-input text-input" name="email" type="email"
+                    placeholder="email@example.com">
+                  <textarea class="popup__textarea text-input" name="free-text" cols="30" rows="10"
                     placeholder="В свободной форме"></textarea>
-                  <button class="popup__send-button button button-red" type="submit">Отправить</button>
+                  <button class="popup__send-button button-red" type="submit">Отправить</button>
                 </form>
               </div>
             </div>
