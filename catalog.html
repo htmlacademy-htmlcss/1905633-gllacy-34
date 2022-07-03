@@ -6,6 +6,7 @@
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="favicon.ico">
+    <script src="js/script-catalog.js" type="module"></script>
   </head>
 
   <body class="catalog-body">
@@ -17,8 +18,32 @@
           </a>
           <nav class="header__navigation">
             <ul class="header-menu list">
-              <li class="header-menu__item">
-                <a href="#" class="link header-menu__text  header-menu__text--selected">Каталог</a>
+              <li class="header-menu__item header-menu__catalogue">
+                <a href="#" class="link header-menu__text header-menu__text--selected text-catalogue">Каталог</a>
+
+                <!-- Выпадающее меню -->
+
+                <div class="header-menu__dropdown-menu dropdown-menu popup--closed">
+                  <ul class="dropdown-menu__list list">
+                    <li class="dropdown-menu__item dropdown-menu__item--highlighted">
+                      <a class="dropdown-menu__text link" href="#">Новинки</a>
+                    </li>
+                    <li class="dropdown-menu__item dropdown-menu__item--current">
+                      <a class="dropdown-menu__text link" href="catalog.html">Сливочное</a>
+                    </li>
+                    <li class="dropdown-menu__item">
+                      <a class="dropdown-menu__text link" href="#">Щербеты</a>
+                    </li>
+                    <li class="dropdown-menu__item">
+                      <a class="dropdown-menu__text link" href="#">Фруктовый лед</a>
+                    </li>
+                    <li class="dropdown-menu__item">
+                      <a class="dropdown-menu__text link" href="#">Мелорин</a>
+                    </li>
+                  </ul>
+
+                </div>
+
               </li>
               <li class="header-menu__item">
                 <a href="#" class="link header-menu__text">Доставка и оплата</a>
@@ -34,12 +59,86 @@
             <a class="header__phone link" href="tel:78005558628">+7 800 555-86-28</a>
             <div class="header__search-container">
               <a href="#" class="link header__search-button">Поиск</a>
+
+              <!-- Попап с поиском -->
+
+              <div class="header__search-container-popup search-popup popup--closed">
+                <form class="search-popup__form" action="https://echo.htmlacademy.ru/">
+                  <input class="search-popup__input text-input" name="search-input" type="text"
+                    placeholder="Поиск по сайту">
+                </form>
+              </div>
+
             </div>
             <div class="header__login-container">
               <a href="#" class="link header__login-button">Вход</a>
+
+              <!-- Попап с логином  -->
+
+              <div class="header__login-popup login-popup popup--closed">
+                <p class="login-popup__caption">Личный кабинет</p>
+                <form class="login-popup__form" action="https://echo.htmlacademy.ru/">
+                  <input class="login-popup__input login-email text-input" name="login-email" type="email"
+                    placeholder="email@example.com">
+                  <input class="login-popup__input login-password text-input" name="login-password" type="password"
+                    placeholder="°°°°°°">
+                  <div class="login-popup__bottom-container">
+                    <button class="login-popup__button button-red" type="submit">Войти</button>
+                    <div class="login-popup__link-container">
+                      <a class="login-popup__reminder login-popup__link link" href="#">Забыли пароль?</a>
+                      <a class="login-popup__register login-popup__link link" href="#">Регистрация</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
             </div>
             <div class="header__basket-container">
               <a href="#" class="link header__basket-button">2 товара</a>
+
+              <!-- Попап с пустой корзиной -->
+
+              <div class="header__basket-popup-empty empty-popup popup--closed">
+                <p class="empty-popup__text">Ваша корзина пока пуста</p>
+              </div>
+
+              <!-- Попап с полной корзиной -->
+
+              <div class="header__basket-popup basket-popup popup--closed">
+                <p class="basket-popup__caption">Корзина</p>
+                <ul class="basket-popup__list list">
+                  <li class="basket-popup__item">
+                    <div class="basket-popup__left-side-container">
+                      <img class="basket-popup__image" src="images/ball1.png" alt="Малинка" width="46px" height="46px">
+                      <div class="basket-popup__product-container">
+                        <p class="basket-popup__label">Малинка</p>
+                        <p class="basket-popup__calculation">1 кг х 310 ₽</p>
+                      </div>
+                    </div>
+                    <div class="basket-popup__right-side-container">
+                      <p class="basket-popup__summ">310 ₽</p>
+                      <button class="basket-popup__remove" type="button">Удалить</button>
+                    </div>
+                  </li>
+                  <li class="basket-popup__item">
+                    <div class="basket-popup__left-side-container">
+                      <img class="basket-popup__image" src="images/ball4.png" alt="Малинка" width="46px" height="46px">
+                      <div class="basket-popup__product-container">
+                        <p class="basket-popup__label">Бабл-гам</p>
+                        <p class="basket-popup__calculation">1,5 кг х 320 ₽</p>
+                      </div>
+                    </div>
+                    <div class="basket-popup__right-side-container">
+                      <p class="basket-popup__summ">480 ₽</p>
+                      <button class="basket-popup__remove" type="button">Удалить</button>
+                    </div>
+                  </li>
+                </ul>
+                <div class="basket-popup__bottom-container">
+                  <a class="basket-popup__order button-red" href="#">Оформить заказ</a>
+                  <p class="basket-popup__grand-total">Итого: 790 ₽</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -80,19 +179,19 @@
               <ul class="fat__list list">
                 <li class="fat__item">
                   <input class="fat__radio" type="radio" name="fat-level" id="fat-0">
-                  <label class="fat__label" for="fat-0">0%</label>
+                  <label class="fat__label" for="fat-0" tabindex="0">0%</label>
                 </li>
                 <li class="fat__item">
                   <input class="fat__radio" type="radio" name="fat-level" id="fat-below-10" checked>
-                  <label class="fat__label" for="fat-below-10">до 10%</label>
+                  <label class="fat__label" for="fat-below-10" tabindex="0">до 10%</label>
                 </li>
                 <li class="fat__item">
                   <input class="fat__radio" type="radio" name="fat-level" id="fat-below-30" value="below-30">
-                  <label class="fat__label" for="fat-below-30">до 30%</label>
+                  <label class="fat__label" for="fat-below-30" tabindex="0">до 30%</label>
                 </li>
                 <li class="fat__item">
                   <input class="fat__radio" type="radio" name="fat-level" id="fat-over-30">
-                  <label class="fat__label" for="fat-over-30">выше 30% </label>
+                  <label class="fat__label" for="fat-over-30" tabindex="0">выше 30% </label>
                 </li>
               </ul>
             </div>
@@ -101,27 +200,27 @@
               <ul class="fill__list list">
                 <li class="fill__item">
                   <input class="fill__checkbox" type="checkbox" id="chocolate" name="chocolate" checked>
-                  <label class="fill__label" for="chocolate">шоколадные</label>
+                  <label class="fill__label" for="chocolate" tabindex="0">шоколадные</label>
                 </li>
                 <li class="fill__item">
                   <input class="fill__checkbox" type="checkbox" id="sugar" name="sugar" checked>
-                  <label class="fill__label" for="sugar">сахарные посыпки</label>
+                  <label class="fill__label" for="sugar" tabindex="0">сахарные посыпки</label>
                 </li>
                 <li class="fill__item">
                   <input class="fill__checkbox" type="checkbox" id="fruit" name="fruit">
-                  <label class="fill__label" for="fruit">фрукты</label>
+                  <label class="fill__label" for="fruit" tabindex="0">фрукты</label>
                 </li>
                 <li class="fill__item">
                   <input class="fill__checkbox" type="checkbox" id="syrop" name="syrop">
-                  <label class="fill__label" for="syrop">сиропы</label>
+                  <label class="fill__label" for="syrop" tabindex="0">сиропы</label>
                 </li>
                 <li class="fill__item">
                   <input class="fill__checkbox" type="checkbox" id="jam" name="jam">
-                  <label class="fill__label" for="jam">джемы</label>
+                  <label class="fill__label" for="jam" tabindex="0">джемы</label>
                 </li>
               </ul>
             </div>
-            <button class="filter__button button" type="submit">Применить</button>
+            <button class="filter__button" type="submit">Применить</button>
           </form>
         </section>
         <section class="catalog-gallery shop">
