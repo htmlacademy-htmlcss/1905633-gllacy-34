@@ -14,7 +14,7 @@
       <header class="header">
         <div class="header__left-part">
           <a class="header__logo link" href="index.html">
-            <img src="images/Logo.svg" alt="На главную страницу Gllacy" width="137px" height="56px">
+            <img src="images/Logo.svg" alt="На главную страницу Gllacy" width="137" height="56">
           </a>
           <nav class="header__navigation">
             <ul class="header-menu list">
@@ -41,7 +41,6 @@
                       <a class="dropdown-menu__text link" href="#">Мелорин</a>
                     </li>
                   </ul>
-
                 </div>
 
               </li>
@@ -109,7 +108,7 @@
                 <ul class="basket-popup__list list">
                   <li class="basket-popup__item">
                     <div class="basket-popup__left-side-container">
-                      <img class="basket-popup__image" src="images/ball1.png" alt="Малинка" width="46px" height="46px">
+                      <img class="basket-popup__image" src="images/ball1.png" alt="Малинка" width="46" height="46">
                       <div class="basket-popup__product-container">
                         <p class="basket-popup__label">Малинка</p>
                         <p class="basket-popup__calculation">1 кг х 310 ₽</p>
@@ -122,7 +121,7 @@
                   </li>
                   <li class="basket-popup__item">
                     <div class="basket-popup__left-side-container">
-                      <img class="basket-popup__image" src="images/ball4.png" alt="Малинка" width="46px" height="46px">
+                      <img class="basket-popup__image" src="images/ball4.png" alt="Малинка" width="46" height="46">
                       <div class="basket-popup__product-container">
                         <p class="basket-popup__label">Бабл-гам</p>
                         <p class="basket-popup__calculation">1,5 кг х 320 ₽</p>
@@ -158,6 +157,7 @@
         </section>
         <h1 class="catalog-caption">Сливочное мороженое</h1>
         <section class="filter">
+          <h2 class="filter__caption visually-hidden">Выберите те сорта мороженного, которые вам по душе</h2>
           <form class="filter__form" action="https://echo.htmlacademy.ru/">
             <div class="filter__sorting">
               <label class="filter__sorting-caption filter-caption" for="sorting">Сортировка:</label>
@@ -171,6 +171,7 @@
               <p class="filter__price-caption filter-caption">Цена: 100 ₽ – 500 ₽</p>
               <div class="filter__price-slider">
                 <button class="filter__price-button low-range-button" type="button">Нижняя граница</button>
+                <span class="filter__price-interval"></span>
                 <button class="filter__price-button high-range-button" type="button">Верхняя граница</button>
               </div>
             </div>
@@ -227,7 +228,7 @@
           <ul class="shop__list list">
             <li class="shop__card">
               <div class="shop__container">
-                <img class="shop__preview-image" src="images/ball1.png" alt="Малинка" width="168px" height="168px">
+                <img class="shop__preview-image" src="images/ball1.png" alt="Малинка" width="168" height="168">
                 <div class="shop__card-content-container">
                   <h4 class="shop__caption">Малинка</h4>
                   <p class="shop__description">Сливочное мороженое с малиновым джемом</p>
@@ -240,7 +241,7 @@
             </li>
             <li class="shop__card">
               <div class="shop__container">
-                <img class="shop__preview-image" src="images/ball2.png" alt="Фисташка" width="168px" height="168px">
+                <img class="shop__preview-image" src="images/ball2.png" alt="Фисташка" width="168" height="168">
                 <div class="shop__card-content-container">
                   <h4 class="shop__caption">Фисташка</h4>
                   <p class="shop__description">Фисташковый пломбир с кусочками шоколада</p>
@@ -253,10 +254,10 @@
             </li>
             <li class="shop__card">
               <div class="shop__container">
-                <img class="shop__preview-image" src="images/ball3.png" alt="Черника" width="168px" height="168px">
+                <img class="shop__preview-image" src="images/ball3.png" alt="Черника" width="168" height="168">
                 <div class="shop__card-content-container">
                   <h4 class="shop__caption">Черника</h4>
-                  <p class="shop__description">Крем-брюле
+                  <p class="shop__description">Крем-брюле<br>
                     с черничным джемом</p>
                   <div class="shop__price-container">
                     <p class="shop__price">330 ₽/кг</p>
@@ -267,10 +268,10 @@
             </li>
             <li class="shop__card">
               <div class="shop__container">
-                <img class="shop__preview-image" src="images/ball4.png" alt="Бабл-гам" width="168px" height="168px">
+                <img class="shop__preview-image" src="images/ball4.png" alt="Бабл-гам" width="168" height="168">
                 <div class="shop__card-content-container">
                   <h4 class="shop__caption">Бабл-гам</h4>
-                  <p class="shop__description">Ванильный пломбир
+                  <p class="shop__description">Ванильный пломбир<br>
                     со сладкой посыпкой</p>
                   <div class="shop__price-container">
                     <p class="shop__price">320 ₽/кг</p>
@@ -281,7 +282,7 @@
             </li>
             <li class="shop__card">
               <div class="shop__container">
-                <img class="shop__preview-image" src="images/ball5.png" alt="Бабл-гам" width="168px" height="168px">
+                <img class="shop__preview-image" src="images/ball5.png" alt="Бабл-гам" width="168" height="168">
                 <div class="shop__card-content-container">
                   <h4 class="shop__caption">Ежевика</h4>
                   <p class="shop__description">Сливочное мороженое с ежевичным джемом</p>
@@ -294,10 +295,10 @@
             </li>
             <li class="shop__card">
               <div class="shop__container">
-                <img class="shop__preview-image" src="images/ball6.png" alt="Бабл-гам" width="168px" height="168px">
+                <img class="shop__preview-image" src="images/ball6.png" alt="Бабл-гам" width="168" height="168">
                 <div class="shop__card-content-container">
                   <h4 class="shop__caption">Банан</h4>
-                  <p class="shop__description">Сливочный пломбир
+                  <p class="shop__description">Сливочный пломбир<br>
                     с банановым вкусом</p>
                   <div class="shop__price-container">
                     <p class="shop__price">340 ₽/кг</p>
@@ -308,7 +309,7 @@
             </li>
             <li class="shop__card">
               <div class="shop__container">
-                <img class="shop__preview-image" src="images/ball7.png" alt="Бабл-гам" width="168px" height="168px">
+                <img class="shop__preview-image" src="images/ball7.png" alt="Бабл-гам" width="168" height="168">
                 <div class="shop__card-content-container">
                   <h4 class="shop__caption">Шоколадка</h4>
                   <p class="shop__description">Классический шоколадный пломбир</p>
@@ -321,10 +322,10 @@
             </li>
             <li class="shop__card">
               <div class="shop__container">
-                <img class="shop__preview-image" src="images/ball8.png" alt="Бабл-гам" width="168px" height="168px">
+                <img class="shop__preview-image" src="images/ball8.png" alt="Бабл-гам" width="168" height="168">
                 <div class="shop__card-content-container">
                   <h4 class="shop__caption">Клубничка</h4>
-                  <p class="shop__description">Сливочный пломбир
+                  <p class="shop__description">Сливочный пломбир<br>
                     с клубничным вкусом</p>
                   <div class="shop__price-container">
                     <p class="shop__price">300 ₽/кг</p>
@@ -335,7 +336,7 @@
             </li>
             <li class="shop__card">
               <div class="shop__container">
-                <img class="shop__preview-image" src="images/ball9.png" alt="Бабл-гам" width="168px" height="168px">
+                <img class="shop__preview-image" src="images/ball9.png" alt="Бабл-гам" width="168" height="168">
                 <div class="shop__card-content-container">
                   <h4 class="shop__caption">Лимон</h4>
                   <p class="shop__description">Освежающий лимонный сорбет</p>
@@ -348,10 +349,10 @@
             </li>
             <li class="shop__card">
               <div class="shop__container">
-                <img class="shop__preview-image" src="images/ball10.png" alt="Бабл-гам" width="168px" height="168px">
+                <img class="shop__preview-image" src="images/ball10.png" alt="Бабл-гам" width="168" height="168">
                 <div class="shop__card-content-container">
                   <h4 class="shop__caption">Ментол</h4>
-                  <p class="shop__description">Сливочный пломбир
+                  <p class="shop__description">Сливочный пломбир<br>
                     с ментоловым сиропом</p>
                   <div class="shop__price-container">
                     <p class="shop__price">320 ₽/кг</p>
@@ -362,7 +363,7 @@
             </li>
             <li class="shop__card">
               <div class="shop__container">
-                <img class="shop__preview-image" src="images/ball11.png" alt="Бабл-гам" width="168px" height="168px">
+                <img class="shop__preview-image" src="images/ball11.png" alt="Бабл-гам" width="168" height="168">
                 <div class="shop__card-content-container">
                   <h4 class="shop__caption">Орешек</h4>
                   <p class="shop__description">Фисташковый пломбир с шоколадным сиропом</p>
@@ -375,7 +376,7 @@
             </li>
             <li class="shop__card">
               <div class="shop__container">
-                <img class="shop__preview-image" src="images/ball12.png" alt="Бабл-гам" width="168px" height="168px">
+                <img class="shop__preview-image" src="images/ball12.png" alt="Бабл-гам" width="168" height="168">
                 <div class="shop__card-content-container">
                   <h4 class="shop__caption">Крем-брюле</h4>
                   <p class="shop__description">Классическое<br> крем-брюле</p>
