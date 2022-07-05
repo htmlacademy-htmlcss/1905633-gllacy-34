@@ -6,6 +6,7 @@ const menuButton = document.querySelector('.header-menu__catalogue');
 const menuText = document.querySelector('.text-catalogue');
 const menuPopup = document.querySelector('.dropdown-menu');
 const searchButton = document.querySelector('.header__search-container');
+// const searchInnerButton = document.querySelector('.header__search-button');
 const searchPopup = document.querySelector('.search-popup');
 const loginButton = document.querySelector('.header__login-container');
 const loginPopup = document.querySelector('.login-popup');
@@ -15,6 +16,7 @@ const nextButton = document.querySelector('.next');
 const previousButton = document.querySelector('.previous');
 const sliderList = document.querySelector('.slider__list');
 const buttonList = document.querySelectorAll('.marker-list__item');
+const scrollCover = document.querySelector('.index-body__scroll-cover');
 
 const sliderSorting = (list, slideNumber) => {
   const newList = list.slice(slideNumber);
@@ -27,34 +29,36 @@ const sliderSorting = (list, slideNumber) => {
   return newList;
 };
 
+const childnessCheck = (elementChild, elementParent) => {
+  while (elementChild.parentElement !== null) {
+    if (elementChild.parentElement == elementParent) {
+      return true;
+    } else {
+      elementChild = elementChild.parentElement;
+    }
+  }
+  return false;
+}
+
+const clickManager = () => {
+  document.addEventListener('click', (evt) => {
+    console.log(evt.target);
+  })
+}
+
+clickManager();
 
 const hideElementOnESC = (element, hideClass, button, highlightedClass) => {
   const callbackOnEsc = (evt) => {
     if (evt.key === 'Escape') {
       element.classList.add(hideClass);
-      button.classList.remove(highlightedClass);
       body.classList.remove('stop-scrolling');
+      scrollCover.classList.add('visually-hidden');
+      button.classList.remove(highlightedClass);
       document.removeEventListener('keydown', callbackOnEsc);
     }
   };
   document.addEventListener('keydown', callbackOnEsc);
-};
-
-const hideElementOnClickOutside = (clickElement, hideElement, hideClass) => {
-  // toggleButton.addEventListener('click', (evt) => {
-  //   console.log("CLICK NA KNOPKU");
-  //   evt.preventDefault()
-  // });
-  document.addEventListener('click', (evt) => {
-    if (!evt.target.classList.contains('contacts__button') && evt.target.classList.contains('popup__window')) {
-      hideElement.classList.add(hideClass);
-    }
-    console.log(evt.target);
-  });
-  clickElement.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    console.log("CLICK W POLE");
-  });
 };
 
 const hideElementOnButtonClick = (element, hideClass) => {
@@ -63,30 +67,57 @@ const hideElementOnButtonClick = (element, hideClass) => {
     evt.preventDefault();
     element.classList.add(hideClass);
     body.classList.remove('stop-scrolling');
+    scrollCover.classList.add('visually-hidden');
   });
 };
 
+// const hideElementOnClickOutside = (popupElement, popupOpenButton, hideClass) => {
+//   if (!popupElement.classList.contains(hideClass)) {
+//     document.addEventListener ('click', (evt) => {
+//       console.log("123");
+//       if (evt.target !== popupElement && evt.target !== popupOpenButton) {
+//         popupElement.classList.add(hideClass);
+//       }
+//     })
+//   }
+// };
+
 toggleButton.addEventListener('click', function () {
+  const popupWindow = document.querySelector('.popup__window');
   body.classList.add('stop-scrolling');
+  scrollCover.classList.remove('visually-hidden');
   contactsPopup.classList.remove('popup--closed');
   hideElementOnESC(contactsPopup, 'popup--closed');
-  // hideElementOnClickOutside(outsideSpace, contactsPopup, 'popup--closed');
   hideElementOnButtonClick(contactsPopup, 'popup--closed');
+  if (!contactsPopup.classList.contains('popup--closed')) {
+    contactsPopup.addEventListener('click', (evt) => {
+      if (evt.target == popupWindow || childnessCheck(evt.target, popupWindow)) {
+        evt.stopPropagation();
+      } else {
+        contactsPopup.classList.add('popup--closed');
+        body.classList.remove('stop-scrolling');
+        scrollCover.classList.add('visually-hidden');
+      }
+    })
+  }
 });
 
-menuButton.addEventListener('click', function () {
+menuButton.addEventListener('click', function (evt) {
   if (!menuText.classList.contains('header-menu__text--selected')) {
     menuPopup.classList.remove('popup--closed');
     menuText.classList.add('header-menu__text--selected');
   } else {
-    menuPopup.classList.add('popup--closed');
-    menuText.classList.remove('header-menu__text--selected');
+    if (evt.target == menuPopup || childnessCheck(evt.target, menuPopup)) {
+      evt.stopPropagation();
+    } else {
+      menuPopup.classList.add('popup--closed');
+      menuText.classList.remove('header-menu__text--selected');
+    }
   }
   hideElementOnESC(menuPopup, 'popup--closed', menuText, 'header-menu__text--selected');
-  // hideElementOnClickOutside(outsideSpace, searchPopup, 'popup--closed');
 });
 
-searchButton.addEventListener('click', function () {
+searchButton.addEventListener('click', function (evt) {
   if (!searchButton.classList.contains('header__search-container--selected')) {
     searchPopup.classList.remove('popup--closed');
     if (!loginPopup.classList.contains('popup--closed')) {
@@ -99,14 +130,18 @@ searchButton.addEventListener('click', function () {
     };
     searchButton.classList.add('header__search-container--selected')
   } else {
-    searchPopup.classList.add('popup--closed');
-    searchButton.classList.remove('header__search-container--selected')
+    if (evt.target == searchPopup || childnessCheck(evt.target, searchPopup)) {
+      evt.stopPropagation();
+    } else {
+      searchPopup.classList.add('popup--closed');
+      searchButton.classList.remove('header__search-container--selected')
+    }
   }
   hideElementOnESC(searchPopup, 'popup--closed', searchButton, 'header__search-container--selected');
-  // hideElementOnClickOutside(outsideSpace, searchPopup, 'popup--closed');
+  // hideElementOnClickOutside(searchPopup, searchInnerButton, 'popup--closed');
 });
 
-loginButton.addEventListener('click', function () {
+loginButton.addEventListener('click', function (evt) {
   if (!loginButton.classList.contains('header__login-container--selected')) {
     loginPopup.classList.remove('popup--closed');
     if (!searchPopup.classList.contains('popup--closed')) {
@@ -119,14 +154,17 @@ loginButton.addEventListener('click', function () {
     };
     loginButton.classList.add('header__login-container--selected')
   } else {
-    loginPopup.classList.add('popup--closed');
-    loginButton.classList.remove('header__login-container--selected')
+    if (evt.target == loginPopup || childnessCheck(evt.target, loginPopup)) {
+      evt.stopPropagation();
+    } else {
+      loginPopup.classList.add('popup--closed');
+      loginButton.classList.remove('header__login-container--selected')
+    }
   }
   hideElementOnESC(loginPopup, 'popup--closed', loginButton, 'header__login-container--selected');
-  // hideElementOnClickOutside(outsideSpace, searchPopup, 'popup--closed');
 });
 
-basketButton.addEventListener('click', function () {
+basketButton.addEventListener('click', function (evt) {
   if (!basketButton.classList.contains('header__basket-container--selected')) {
     basketPopup.classList.remove('popup--closed');
     if (!searchPopup.classList.contains('popup--closed')) {
@@ -139,11 +177,14 @@ basketButton.addEventListener('click', function () {
     };
     basketButton.classList.add('header__basket-container--selected')
   } else {
-    basketPopup.classList.add('popup--closed');
-    basketButton.classList.remove('header__basket-container--selected')
+    if (evt.target == basketPopup || childnessCheck(evt.target, basketPopup)) {
+      evt.stopPropagation();
+    } else {
+      basketPopup.classList.add('popup--closed');
+      basketButton.classList.remove('header__basket-container--selected')
+    }
   };
   hideElementOnESC(basketPopup, 'popup--closed', basketButton, 'header__basket-container--selected');
-  // hideElementOnClickOutside(outsideSpace, searchPopup, 'popup--closed');
 });
 
 let screen = 0;
@@ -194,7 +235,6 @@ previousButton.addEventListener('click', () => {
     screen--;
   }
 });
-
 
 const slides = document.querySelectorAll('.slider__item');
 for (let i = 0; i <= (buttonList.length - 1); i++) {

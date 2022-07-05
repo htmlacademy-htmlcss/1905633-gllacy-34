@@ -25,6 +25,16 @@ const sliderSorting = (list, slideNumber) => {
   return newList;
 };
 
+const childnessCheck = (elementChild, elementParent) => {
+  while (elementChild.parentElement !== null) {
+    if (elementChild.parentElement == elementParent) {
+      return true;
+    } else {
+      elementChild = elementChild.parentElement;
+    }
+  }
+  return false;
+}
 
 const hideElementOnESC = (element, hideClass, button, highlightedClass) => {
   const callbackOnEsc = (evt) => {
@@ -38,22 +48,22 @@ const hideElementOnESC = (element, hideClass, button, highlightedClass) => {
   document.addEventListener('keydown', callbackOnEsc);
 };
 
-const hideElementOnClickOutside = (clickElement, hideElement, hideClass) => {
-  // toggleButton.addEventListener('click', (evt) => {
-  //   console.log("CLICK NA KNOPKU");
-  //   evt.preventDefault()
-  // });
-  document.addEventListener('click', (evt) => {
-    if (!evt.target.classList.contains('contacts__button') && evt.target.classList.contains('popup__window')) {
-      hideElement.classList.add(hideClass);
-    }
-    console.log(evt.target);
-  });
-  clickElement.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    console.log("CLICK W POLE");
-  });
-};
+// const hideElementOnClickOutside = (clickElement, hideElement, hideClass) => {
+//   // toggleButton.addEventListener('click', (evt) => {
+//   //   console.log("CLICK NA KNOPKU");
+//   //   evt.preventDefault()
+//   // });
+//   document.addEventListener('click', (evt) => {
+//     if (!evt.target.classList.contains('contacts__button') && evt.target.classList.contains('popup__window')) {
+//       hideElement.classList.add(hideClass);
+//     }
+//     console.log(evt.target);
+//   });
+//   clickElement.addEventListener('click', (evt) => {
+//     evt.preventDefault();
+//     console.log("CLICK W POLE");
+//   });
+// };
 
 const hideElementOnButtonClick = (element, hideClass) => {
   const button = element.querySelector('.popup__close-button');
@@ -64,17 +74,24 @@ const hideElementOnButtonClick = (element, hideClass) => {
   });
 };
 
-menuButton.addEventListener('click', function () {
-  if (menuPopup.classList.contains('popup--closed')) {
+menuButton.addEventListener('click', function (evt) {
+  console.log(evt.target);
+  if (!menuText.classList.contains('header-menu__text--selected')) {
     menuPopup.classList.remove('popup--closed');
+    menuText.classList.add('header-menu__text--selected');
   } else {
-    menuPopup.classList.add('popup--closed');
+    if (evt.target == menuPopup || childnessCheck(evt.target, menuPopup)) {
+      evt.stopPropagation();
+    } else {
+      menuPopup.classList.add('popup--closed');
+      menuText.classList.remove('header-menu__text--selected');
+    }
   }
   hideElementOnESC(menuPopup, 'popup--closed', menuText, 'header-menu__text--selected');
   // hideElementOnClickOutside(outsideSpace, searchPopup, 'popup--closed');
 });
 
-searchButton.addEventListener('click', function () {
+searchButton.addEventListener('click', function (evt) {
   if (!searchButton.classList.contains('header__search-container--selected')) {
     searchPopup.classList.remove('popup--closed');
     if (!loginPopup.classList.contains('popup--closed')) {
@@ -87,14 +104,18 @@ searchButton.addEventListener('click', function () {
     };
     searchButton.classList.add('header__search-container--selected')
   } else {
-    searchPopup.classList.add('popup--closed');
-    searchButton.classList.remove('header__search-container--selected')
+    if (evt.target == searchPopup || childnessCheck(evt.target, searchPopup)) {
+      evt.stopPropagation();
+    } else {
+      searchPopup.classList.add('popup--closed');
+      searchButton.classList.remove('header__search-container--selected')
+    }
   }
   hideElementOnESC(searchPopup, 'popup--closed', searchButton, 'header__search-container--selected');
   // hideElementOnClickOutside(outsideSpace, searchPopup, 'popup--closed');
 });
 
-loginButton.addEventListener('click', function () {
+loginButton.addEventListener('click', function (evt) {
   if (!loginButton.classList.contains('header__login-container--selected')) {
     loginPopup.classList.remove('popup--closed');
     if (!searchPopup.classList.contains('popup--closed')) {
@@ -107,14 +128,18 @@ loginButton.addEventListener('click', function () {
     };
     loginButton.classList.add('header__login-container--selected')
   } else {
-    loginPopup.classList.add('popup--closed');
-    loginButton.classList.remove('header__login-container--selected')
+    if (evt.target == loginPopup || childnessCheck(evt.target, loginPopup)) {
+      evt.stopPropagation();
+    } else {
+      loginPopup.classList.add('popup--closed');
+      loginButton.classList.remove('header__login-container--selected')
+    }
   }
   hideElementOnESC(loginPopup, 'popup--closed', loginButton, 'header__login-container--selected');
   // hideElementOnClickOutside(outsideSpace, searchPopup, 'popup--closed');
 });
 
-basketButton.addEventListener('click', function () {
+basketButton.addEventListener('click', function (evt) {
   if (!basketButton.classList.contains('header__basket-container--selected')) {
     basketPopup.classList.remove('popup--closed');
     if (!searchPopup.classList.contains('popup--closed')) {
@@ -127,8 +152,12 @@ basketButton.addEventListener('click', function () {
     };
     basketButton.classList.add('header__basket-container--selected')
   } else {
-    basketPopup.classList.add('popup--closed');
-    basketButton.classList.remove('header__basket-container--selected')
+    if (evt.target == basketPopup || childnessCheck(evt.target, basketPopup)) {
+      evt.stopPropagation();
+    } else {
+      basketPopup.classList.add('popup--closed');
+      basketButton.classList.remove('header__basket-container--selected')
+    }
   };
   hideElementOnESC(basketPopup, 'popup--closed', basketButton, 'header__basket-container--selected');
   // hideElementOnClickOutside(outsideSpace, searchPopup, 'popup--closed');
