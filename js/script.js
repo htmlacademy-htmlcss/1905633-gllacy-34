@@ -6,7 +6,6 @@ const menuButton = document.querySelector('.header-menu__catalogue');
 const menuText = document.querySelector('.text-catalogue');
 const menuPopup = document.querySelector('.dropdown-menu');
 const searchButton = document.querySelector('.header__search-container');
-// const searchInnerButton = document.querySelector('.header__search-button');
 const searchPopup = document.querySelector('.search-popup');
 const loginButton = document.querySelector('.header__login-container');
 const loginPopup = document.querySelector('.login-popup');
@@ -40,14 +39,6 @@ const childnessCheck = (elementChild, elementParent) => {
   return false;
 }
 
-const clickManager = () => {
-  document.addEventListener('click', (evt) => {
-    console.log(evt.target);
-  })
-}
-
-clickManager();
-
 const hideElementOnESC = (element, hideClass, button, highlightedClass) => {
   const callbackOnEsc = (evt) => {
     if (evt.key === 'Escape') {
@@ -71,36 +62,28 @@ const hideElementOnButtonClick = (element, hideClass) => {
   });
 };
 
-// const hideElementOnClickOutside = (popupElement, popupOpenButton, hideClass) => {
-//   if (!popupElement.classList.contains(hideClass)) {
-//     document.addEventListener ('click', (evt) => {
-//       console.log("123");
-//       if (evt.target !== popupElement && evt.target !== popupOpenButton) {
-//         popupElement.classList.add(hideClass);
-//       }
-//     })
-//   }
-// };
+if (body.classList.contains('index-body')) {
+  toggleButton.addEventListener('click', function () {
+    const popupWindow = document.querySelector('.popup__window');
+    body.classList.add('stop-scrolling');
+    scrollCover.classList.remove('visually-hidden');
+    contactsPopup.classList.remove('popup--closed');
+    hideElementOnESC(contactsPopup, 'popup--closed');
+    hideElementOnButtonClick(contactsPopup, 'popup--closed');
+    if (!contactsPopup.classList.contains('popup--closed')) {
+      contactsPopup.addEventListener('click', (evt) => {
+        if (evt.target == popupWindow || childnessCheck(evt.target, popupWindow)) {
+          evt.stopPropagation();
+        } else {
+          contactsPopup.classList.add('popup--closed');
+          body.classList.remove('stop-scrolling');
+          scrollCover.classList.add('visually-hidden');
+        }
+      })
+    }
+  });
+}
 
-toggleButton.addEventListener('click', function () {
-  const popupWindow = document.querySelector('.popup__window');
-  body.classList.add('stop-scrolling');
-  scrollCover.classList.remove('visually-hidden');
-  contactsPopup.classList.remove('popup--closed');
-  hideElementOnESC(contactsPopup, 'popup--closed');
-  hideElementOnButtonClick(contactsPopup, 'popup--closed');
-  if (!contactsPopup.classList.contains('popup--closed')) {
-    contactsPopup.addEventListener('click', (evt) => {
-      if (evt.target == popupWindow || childnessCheck(evt.target, popupWindow)) {
-        evt.stopPropagation();
-      } else {
-        contactsPopup.classList.add('popup--closed');
-        body.classList.remove('stop-scrolling');
-        scrollCover.classList.add('visually-hidden');
-      }
-    })
-  }
-});
 
 menuButton.addEventListener('click', function (evt) {
   if (!menuText.classList.contains('header-menu__text--selected')) {
@@ -138,7 +121,6 @@ searchButton.addEventListener('click', function (evt) {
     }
   }
   hideElementOnESC(searchPopup, 'popup--closed', searchButton, 'header__search-container--selected');
-  // hideElementOnClickOutside(searchPopup, searchInnerButton, 'popup--closed');
 });
 
 loginButton.addEventListener('click', function (evt) {
@@ -187,85 +169,107 @@ basketButton.addEventListener('click', function (evt) {
   hideElementOnESC(basketPopup, 'popup--closed', basketButton, 'header__basket-container--selected');
 });
 
-let screen = 0;
-const interfaceList = ['index-body--pink', 'index-body--blue', 'index-body--yellow'];
+if (body.classList.contains('index-body')) {
+  let screen = 0;
+  const interfaceList = ['index-body--pink', 'index-body--blue', 'index-body--yellow'];
 
-nextButton.addEventListener('click', () => {
-  const sliderItems = document.querySelectorAll('.slider__item');
-  let saved = sliderItems[0];
-  sliderItems[0].remove();
-  sliderItems[1].classList.remove('slider__item--inactive');
-  saved.classList.add('slider__item--inactive');
-  sliderList.append(saved);
-  for (let j = 0; j <= interfaceList.length - 1; j++) {
-    body.classList.remove(interfaceList[j]);
-    buttonList[j].querySelector('.marker-list__button').classList.remove('marker-list__button--active');
-  }
-  if (screen == 2) {
-    screen = -1;
-    body.classList.add(interfaceList[screen + 1]);
-    buttonList[screen + 1].querySelector('.marker-list__button').classList.add('marker-list__button--active');
-    screen++;
-  } else {
-    body.classList.add(interfaceList[screen + 1]);
-    buttonList[screen + 1].querySelector('.marker-list__button').classList.add('marker-list__button--active');
-    screen++;
-  }
-});
-
-previousButton.addEventListener('click', () => {
-  const sliderItems = document.querySelectorAll('.slider__item');
-  let saved = sliderItems[sliderItems.length - 1];
-  sliderItems[sliderItems.length - 1].remove();
-  sliderItems[sliderItems.length - 1].classList.remove('slider__item--inactive');
-  sliderItems[0].classList.add('slider__item--inactive');
-  sliderList.prepend(saved);
-  for (let j = 0; j <= interfaceList.length - 1; j++) {
-    body.classList.remove(interfaceList[j]);
-    buttonList[j].querySelector('.marker-list__button').classList.remove('marker-list__button--active');
-  }
-  if (screen == 0) {
-    screen = 3;
-    body.classList.add(interfaceList[screen - 1]);
-    buttonList[screen - 1].querySelector('.marker-list__button').classList.add('marker-list__button--active');
-    screen--;
-  } else {
-    body.classList.add(interfaceList[screen - 1]);
-    buttonList[screen - 1].querySelector('.marker-list__button').classList.add('marker-list__button--active');
-    screen--;
-  }
-});
-
-const slides = document.querySelectorAll('.slider__item');
-for (let i = 0; i <= (buttonList.length - 1); i++) {
-  buttonList[i].addEventListener('click', () => {
-    const sliderCircle = buttonList[i].querySelector('.marker-list__button');
-    const slideArray = [];
-    for (let z = 0; z <= slides.length - 1; z++) {
-      slideArray.push(slides[z]);
-    }
-    const reshuffledArray = sliderSorting(slideArray, i);
-
+  nextButton.addEventListener('click', () => {
+    const sliderItems = document.querySelectorAll('.slider__item');
+    let saved = sliderItems[0];
+    sliderItems[0].remove();
+    sliderItems[1].classList.remove('slider__item--inactive');
+    saved.classList.add('slider__item--inactive');
+    sliderList.append(saved);
     for (let j = 0; j <= interfaceList.length - 1; j++) {
       body.classList.remove(interfaceList[j]);
       buttonList[j].querySelector('.marker-list__button').classList.remove('marker-list__button--active');
     }
-    body.classList.add(interfaceList[i]);
-    sliderCircle.classList.add('marker-list__button--active');
-
-    if (i !== screen) {
-      screen = i;
-      for (let k = 0; k <= slides.length - 1; k++) {
-        slides[k].remove();
-      };
-      reshuffledArray.forEach(element => element.classList.remove('slider__item--inactive'));
-      for (let m = 1; m <= reshuffledArray.length - 1; m++) {
-        reshuffledArray[m].classList.add('slider__item--inactive');
-      };
-      for (let l = 0; l <= reshuffledArray.length - 1; l++) {
-        sliderList.append(reshuffledArray[l]);
-      };
-    };
-    console.log(screen);
+    if (screen == 2) {
+      screen = -1;
+      body.classList.add(interfaceList[screen + 1]);
+      buttonList[screen + 1].querySelector('.marker-list__button').classList.add('marker-list__button--active');
+      screen++;
+    } else {
+      body.classList.add(interfaceList[screen + 1]);
+      buttonList[screen + 1].querySelector('.marker-list__button').classList.add('marker-list__button--active');
+      screen++;
+    }
   });
-};
+
+  previousButton.addEventListener('click', () => {
+    const sliderItems = document.querySelectorAll('.slider__item');
+    let saved = sliderItems[sliderItems.length - 1];
+    sliderItems[sliderItems.length - 1].remove();
+    sliderItems[sliderItems.length - 1].classList.remove('slider__item--inactive');
+    sliderItems[0].classList.add('slider__item--inactive');
+    sliderList.prepend(saved);
+    for (let j = 0; j <= interfaceList.length - 1; j++) {
+      body.classList.remove(interfaceList[j]);
+      buttonList[j].querySelector('.marker-list__button').classList.remove('marker-list__button--active');
+    }
+    if (screen == 0) {
+      screen = 3;
+      body.classList.add(interfaceList[screen - 1]);
+      buttonList[screen - 1].querySelector('.marker-list__button').classList.add('marker-list__button--active');
+      screen--;
+    } else {
+      body.classList.add(interfaceList[screen - 1]);
+      buttonList[screen - 1].querySelector('.marker-list__button').classList.add('marker-list__button--active');
+      screen--;
+    }
+  });
+
+  const slides = document.querySelectorAll('.slider__item');
+  for (let i = 0; i <= (buttonList.length - 1); i++) {
+    buttonList[i].addEventListener('click', () => {
+      const sliderCircle = buttonList[i].querySelector('.marker-list__button');
+      const slideArray = [];
+      for (let z = 0; z <= slides.length - 1; z++) {
+        slideArray.push(slides[z]);
+      }
+      const reshuffledArray = sliderSorting(slideArray, i);
+
+      for (let j = 0; j <= interfaceList.length - 1; j++) {
+        body.classList.remove(interfaceList[j]);
+        buttonList[j].querySelector('.marker-list__button').classList.remove('marker-list__button--active');
+      }
+      body.classList.add(interfaceList[i]);
+      sliderCircle.classList.add('marker-list__button--active');
+
+      if (i !== screen) {
+        screen = i;
+        for (let k = 0; k <= slides.length - 1; k++) {
+          slides[k].remove();
+        };
+        reshuffledArray.forEach(element => element.classList.remove('slider__item--inactive'));
+        for (let m = 1; m <= reshuffledArray.length - 1; m++) {
+          reshuffledArray[m].classList.add('slider__item--inactive');
+        };
+        for (let l = 0; l <= reshuffledArray.length - 1; l++) {
+          sliderList.append(reshuffledArray[l]);
+        };
+      };
+      console.log(screen);
+    });
+  };
+}
+
+// const clickManager = () => {
+//   document.addEventListener('click', (evt) => {
+//     console.log(evt.target);
+//   })
+// }
+
+// clickManager();
+
+// const searchInnerButton = document.querySelector('.header__search-button');
+// const hideElementOnClickOutside = (popupElement, popupOpenButton, hideClass) => {
+//   if (!popupElement.classList.contains(hideClass)) {
+//     document.addEventListener ('click', (evt) => {
+//       console.log("123");
+//       if (evt.target !== popupElement && evt.target !== popupOpenButton) {
+//         popupElement.classList.add(hideClass);
+//       }
+//     })
+//   }
+// };
