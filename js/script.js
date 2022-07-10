@@ -84,7 +84,6 @@ if (body.classList.contains('index-body')) {
   });
 }
 
-
 menuButton.addEventListener('click', function (evt) {
   if (!menuText.classList.contains('header-menu__text--selected')) {
     menuPopup.classList.remove('popup--closed');
@@ -253,23 +252,3 @@ if (body.classList.contains('index-body')) {
     });
   };
 }
-
-// const clickManager = () => {
-//   document.addEventListener('click', (evt) => {
-//     console.log(evt.target);
-//   })
-// }
-
-// clickManager();
-
-// const searchInnerButton = document.querySelector('.header__search-button');
-// const hideElementOnClickOutside = (popupElement, popupOpenButton, hideClass) => {
-//   if (!popupElement.classList.contains(hideClass)) {
-//     document.addEventListener ('click', (evt) => {
-//       console.log("123");
-//       if (evt.target !== popupElement && evt.target !== popupOpenButton) {
-//         popupElement.classList.add(hideClass);
-//       }
-//     })
-//   }
-// };

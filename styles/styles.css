@@ -739,6 +739,10 @@ img {
   text-align: left;
 }
 
+.basket-popup__order {
+  max-width: 200px;
+}
+
 .basket-popup__summ {
   font-family: inherit;
   font-size: 18px;
@@ -832,6 +836,7 @@ img {
 }
 
 .slider__item--inactive .button {
+  display: none;
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1110,6 +1115,7 @@ img {
   margin-left: 36px;
   margin-top: 36px;
   margin-bottom: 28px;
+  max-width: 328px;
 }
 
 .gifts__offer-description {
@@ -1129,6 +1135,7 @@ img {
   margin-left: 36px;
   margin-top: 0;
   margin-bottom: 36px;
+  max-width: 328px;
 }
 
 .gallery__caption {
@@ -1184,7 +1191,7 @@ img {
   width: 190px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 24px;
+  padding-bottom: 24px;
   padding-top: 133px;
 }
 
@@ -1424,9 +1431,11 @@ img {
 
 .subscription__button {
   padding-bottom: 14px;
+  max-width: 152px;
 }
 
 .delivery {
+  background-color: #F2F2F4;
   background-image: url("../images/deliverybg.jpg");
   background-size: 1225px auto;
   background-repeat: no-repeat;
@@ -1583,6 +1592,7 @@ img {
 }
 
 .contacts {
+  background-color: #deb5bb;
   background-image: url("../images/contactsbg.jpg");
   background-repeat: no-repeat;
   background-position: 0 -83px;
@@ -2095,8 +2105,7 @@ img {
   margin-left: auto;
 }
 
-.pagination__item:first-of-type .pagination__link,
-.pagination__item:last-of-type .pagination__link {
+.pagination-arrow .pagination__link {
   display: block;
   text-indent: -9999em;
   white-space: nowrap;
@@ -2107,11 +2116,11 @@ img {
   background-position: 8px 5px;
 }
 
-.pagination__item:first-of-type .pagination__link {
+.pagination-arrow-left .pagination__link {
   background-image: url("../images/pagination-left.svg");
 }
 
-.pagination__item:last-of-type .pagination__link {
+.pagination-arrow-right .pagination__link {
   background-image: url("../images/pagination-right.svg");
 }
 
