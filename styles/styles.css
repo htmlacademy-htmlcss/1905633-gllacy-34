@@ -1918,10 +1918,6 @@ img {
   margin-left: 9px;
 }
 
-.fat__radio {
-  display: none;
-}
-
 .fat__label {
   font-family: inherit;
   font-size: 14px;
@@ -1957,6 +1953,22 @@ img {
   background-image: url("../images/radio-hov-untick.svg");
 }
 
+.fat__radio:checked:focus-visible ~ .fat__label::before {
+  background-image: url("../images/radio-hov-tick.svg");
+}
+
+.fat__radio:focus-visible ~ .fat__label::before {
+  background-image: url("../images/radio-hov-untick.svg");
+}
+
+.fat__radio:checked:focus ~ .fat__label::before {
+  background-image: url("../images/radio-hov-tick.svg");
+}
+
+.fat__radio:focus ~ .fat__label::before {
+  background-image: url("../images/radio-hov-untick.svg");
+}
+
 .fat__radio:checked:disabled ~ .fat__label::before {
   background-image: url("../images/radio-dis-tick.svg");
 }
@@ -1981,10 +1993,6 @@ img {
 
 .fill__item {
   position: relative;
-}
-
-.fill__checkbox {
-  display: none;
 }
 
 .fill__label {
@@ -2019,6 +2027,22 @@ img {
 }
 
 .fill__checkbox:hover ~ .fill__label::before {
+  background-image: url("../images/checkbox-hov-untick.svg");
+}
+
+.fill__checkbox:focus-visible:checked ~ .fill__label::before {
+  background-image: url("../images/checkbox-hov-tick.svg");
+}
+
+.fill__checkbox:focus-visible ~ .fill__label::before {
+  background-image: url("../images/checkbox-hov-untick.svg");
+}
+
+.fill__checkbox:focus:checked ~ .fill__label::before {
+  background-image: url("../images/checkbox-hov-tick.svg");
+}
+
+.fill__checkbox:focus ~ .fill__label::before {
   background-image: url("../images/checkbox-hov-untick.svg");
 }
 

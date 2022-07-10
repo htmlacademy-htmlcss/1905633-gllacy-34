@@ -8,6 +8,7 @@ const menuPopup = document.querySelector('.dropdown-menu');
 const searchButton = document.querySelector('.header__search-container');
 const searchPopup = document.querySelector('.search-popup');
 const loginButton = document.querySelector('.header__login-container');
+const loginLink = document.querySelector('.header__login-button');
 const loginPopup = document.querySelector('.login-popup');
 const basketButton = document.querySelector('.header__basket-container');
 const basketPopup = document.querySelector('.basket-popup');

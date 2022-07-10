@@ -143,6 +143,7 @@
       </header>
 
       <main class="main">
+        <h1 class="catalog-title visually-hidden">Каталог мороженного Gllacy</h1>
         <section class="breadcrumbs">
           <h2 class="breadcrumbs__caption visually-hidden">Навигация</h2>
           <ul class="breadcrumbs__list list">
@@ -154,7 +155,7 @@
             </li>
           </ul>
         </section>
-        <h1 class="catalog-caption">Сливочное мороженое</h1>
+        <p class="catalog-caption">Сливочное мороженое</p>
         <section class="filter">
           <h2 class="filter__caption visually-hidden">Выберите те сорта мороженного, которые вам по душе</h2>
           <form class="filter__form" action="https://echo.htmlacademy.ru/">
@@ -178,20 +179,20 @@
               <p class="fat__caption filter-caption">Жирность:</p>
               <ul class="fat__list list">
                 <li class="fat__item">
-                  <input class="fat__radio" type="radio" name="fat-level" id="fat-0">
-                  <label class="fat__label" for="fat-0" tabindex="0">0%</label>
+                  <input class="fat__radio visually-hidden" type="radio" name="fat-level" id="fat-0">
+                  <label class="fat__label" for="fat-0">0%</label>
                 </li>
                 <li class="fat__item">
-                  <input class="fat__radio" type="radio" name="fat-level" id="fat-below-10" checked>
-                  <label class="fat__label" for="fat-below-10" tabindex="0">до 10%</label>
+                  <input class="fat__radio visually-hidden" type="radio" name="fat-level" id="fat-below-10" checked>
+                  <label class="fat__label" for="fat-below-10">до 10%</label>
                 </li>
                 <li class="fat__item">
-                  <input class="fat__radio" type="radio" name="fat-level" id="fat-below-30" value="below-30">
-                  <label class="fat__label" for="fat-below-30" tabindex="0">до 30%</label>
+                  <input class="fat__radio visually-hidden" type="radio" name="fat-level" id="fat-below-30" value="below-30">
+                  <label class="fat__label" for="fat-below-30">до 30%</label>
                 </li>
                 <li class="fat__item">
-                  <input class="fat__radio" type="radio" name="fat-level" id="fat-over-30">
-                  <label class="fat__label" for="fat-over-30" tabindex="0">выше 30% </label>
+                  <input class="fat__radio visually-hidden" type="radio" name="fat-level" id="fat-over-30">
+                  <label class="fat__label" for="fat-over-30">выше 30% </label>
                 </li>
               </ul>
             </div>
@@ -199,24 +200,24 @@
               <p class="fill__caption filter-caption">Наполнители:</p>
               <ul class="fill__list list">
                 <li class="fill__item">
-                  <input class="fill__checkbox" type="checkbox" id="chocolate" name="chocolate" checked>
-                  <label class="fill__label" for="chocolate" tabindex="0">шоколадные</label>
+                  <input class="fill__checkbox visually-hidden" type="checkbox" id="chocolate" name="chocolate" checked>
+                  <label class="fill__label" for="chocolate">шоколадные</label>
                 </li>
                 <li class="fill__item">
-                  <input class="fill__checkbox" type="checkbox" id="sugar" name="sugar" checked>
-                  <label class="fill__label" for="sugar" tabindex="0">сахарные посыпки</label>
+                  <input class="fill__checkbox visually-hidden" type="checkbox" id="sugar" name="sugar" checked>
+                  <label class="fill__label" for="sugar">сахарные посыпки</label>
                 </li>
                 <li class="fill__item">
-                  <input class="fill__checkbox" type="checkbox" id="fruit" name="fruit">
-                  <label class="fill__label" for="fruit" tabindex="0">фрукты</label>
+                  <input class="fill__checkbox visually-hidden" type="checkbox" id="fruit" name="fruit">
+                  <label class="fill__label" for="fruit">фрукты</label>
                 </li>
                 <li class="fill__item">
-                  <input class="fill__checkbox" type="checkbox" id="syrop" name="syrop">
-                  <label class="fill__label" for="syrop" tabindex="0">сиропы</label>
+                  <input class="fill__checkbox visually-hidden" type="checkbox" id="syrop" name="syrop">
+                  <label class="fill__label" for="syrop">сиропы</label>
                 </li>
                 <li class="fill__item">
-                  <input class="fill__checkbox" type="checkbox" id="jam" name="jam">
-                  <label class="fill__label" for="jam" tabindex="0">джемы</label>
+                  <input class="fill__checkbox visually-hidden" type="checkbox" id="jam" name="jam">
+                  <label class="fill__label" for="jam">джемы</label>
                 </li>
               </ul>
             </div>
@@ -224,12 +225,13 @@
           </form>
         </section>
         <section class="catalog-gallery shop">
+          <h2 class="shop__caption visually-hidden">Магазин</h2>
           <ul class="shop__list list">
             <li class="shop__card">
               <div class="shop__container">
                 <img class="shop__preview-image" src="images/ball1.png" alt="Малинка." width="168" height="168">
                 <div class="shop__card-content-container">
-                  <h4 class="shop__caption">Малинка</h4>
+                  <h3 class="shop__caption">Малинка</h3>
                   <p class="shop__description">Сливочное мороженое с малиновым джемом</p>
                   <div class="shop__price-container">
                     <p class="shop__price">310 ₽/кг</p>
@@ -242,7 +244,7 @@
               <div class="shop__container">
                 <img class="shop__preview-image" src="images/ball2.png" alt="Фисташка." width="168" height="168">
                 <div class="shop__card-content-container">
-                  <h4 class="shop__caption">Фисташка</h4>
+                  <h3 class="shop__caption">Фисташка</h3>
                   <p class="shop__description">Фисташковый пломбир с кусочками шоколада</p>
                   <div class="shop__price-container">
                     <p class="shop__price">340 ₽/кг</p>
@@ -255,7 +257,7 @@
               <div class="shop__container">
                 <img class="shop__preview-image" src="images/ball3.png" alt="Черника." width="168" height="168">
                 <div class="shop__card-content-container">
-                  <h4 class="shop__caption">Черника</h4>
+                  <h3 class="shop__caption">Черника</h3>
                   <p class="shop__description">Крем-брюле<br>
                     с черничным джемом</p>
                   <div class="shop__price-container">
@@ -269,7 +271,7 @@
               <div class="shop__container">
                 <img class="shop__preview-image" src="images/ball4.png" alt="Бабл-гам." width="168" height="168">
                 <div class="shop__card-content-container">
-                  <h4 class="shop__caption">Бабл-гам</h4>
+                  <h3 class="shop__caption">Бабл-гам</h3>
                   <p class="shop__description">Ванильный пломбир<br>
                     со сладкой посыпкой</p>
                   <div class="shop__price-container">
@@ -283,7 +285,7 @@
               <div class="shop__container">
                 <img class="shop__preview-image" src="images/ball5.png" alt="Ежевика." width="168" height="168">
                 <div class="shop__card-content-container">
-                  <h4 class="shop__caption">Ежевика</h4>
+                  <h3 class="shop__caption">Ежевика</h3>
                   <p class="shop__description">Сливочное мороженое с ежевичным джемом</p>
                   <div class="shop__price-container">
                     <p class="shop__price">330 ₽/кг</p>
@@ -296,7 +298,7 @@
               <div class="shop__container">
                 <img class="shop__preview-image" src="images/ball6.png" alt="Банан." width="168" height="168">
                 <div class="shop__card-content-container">
-                  <h4 class="shop__caption">Банан</h4>
+                  <h3 class="shop__caption">Банан</h3>
                   <p class="shop__description">Сливочный пломбир<br>
                     с банановым вкусом</p>
                   <div class="shop__price-container">
@@ -310,7 +312,7 @@
               <div class="shop__container">
                 <img class="shop__preview-image" src="images/ball7.png" alt="Шоколадка." width="168" height="168">
                 <div class="shop__card-content-container">
-                  <h4 class="shop__caption">Шоколадка</h4>
+                  <h3 class="shop__caption">Шоколадка</h3>
                   <p class="shop__description">Классический шоколадный пломбир</p>
                   <div class="shop__price-container">
                     <p class="shop__price">270 ₽/кг</p>
@@ -323,7 +325,7 @@
               <div class="shop__container">
                 <img class="shop__preview-image" src="images/ball8.png" alt="Клубничка." width="168" height="168">
                 <div class="shop__card-content-container">
-                  <h4 class="shop__caption">Клубничка</h4>
+                  <h3 class="shop__caption">Клубничка</h3>
                   <p class="shop__description">Сливочный пломбир<br>
                     с клубничным вкусом</p>
                   <div class="shop__price-container">
@@ -337,7 +339,7 @@
               <div class="shop__container">
                 <img class="shop__preview-image" src="images/ball9.png" alt="Лимон." width="168" height="168">
                 <div class="shop__card-content-container">
-                  <h4 class="shop__caption">Лимон</h4>
+                  <h3 class="shop__caption">Лимон</h3>
                   <p class="shop__description">Освежающий лимонный сорбет</p>
                   <div class="shop__price-container">
                     <p class="shop__price">310 ₽/кг</p>
@@ -350,7 +352,7 @@
               <div class="shop__container">
                 <img class="shop__preview-image" src="images/ball10.png" alt="Ментол." width="168" height="168">
                 <div class="shop__card-content-container">
-                  <h4 class="shop__caption">Ментол</h4>
+                  <h3 class="shop__caption">Ментол</h3>
                   <p class="shop__description">Сливочный пломбир<br>
                     с ментоловым сиропом</p>
                   <div class="shop__price-container">
@@ -364,7 +366,7 @@
               <div class="shop__container">
                 <img class="shop__preview-image" src="images/ball11.png" alt="Орешек." width="168" height="168">
                 <div class="shop__card-content-container">
-                  <h4 class="shop__caption">Орешек</h4>
+                  <h3 class="shop__caption">Орешек</h3>
                   <p class="shop__description">Фисташковый пломбир с шоколадным сиропом</p>
                   <div class="shop__price-container">
                     <p class="shop__price">360 ₽/кг</p>
@@ -377,7 +379,7 @@
               <div class="shop__container">
                 <img class="shop__preview-image" src="images/ball12.png" alt="Крем-брюле." width="168" height="168">
                 <div class="shop__card-content-container">
-                  <h4 class="shop__caption">Крем-брюле</h4>
+                  <h3 class="shop__caption">Крем-брюле</h3>
                   <p class="shop__description">Классическое<br> крем-брюле</p>
                   <div class="shop__price-container">
                     <p class="shop__price">280 ₽/кг</p>
