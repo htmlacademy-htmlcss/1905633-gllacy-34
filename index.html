@@ -63,7 +63,7 @@
 
               <div class="header__search-container-popup search-popup popup--closed">
                 <form class="search-popup__form" action="https://echo.htmlacademy.ru/">
-                  <input class="search-popup__input text-input" name="search-input" type="text"
+                  <input class="search-popup__input text-input" name="search-input" type="search"
                     placeholder="Поиск по сайту">
                 </form>
               </div>
@@ -306,8 +306,8 @@
               <li class="advantages__item advantages__item--farm">
                 <p class="advantages__description">
                   Закупка ингредиентов производится только<br>
-                  у проверенных фермерских хозяйств, с которыми<br>
-                  нас связывает долговременное сотрудничество.
+                  у проверенных фермерских хозяйств, с которыми
+                  нас&nbsp;связывает долговременное сотрудничество.
                 </p>
               </li>
               <li class="advantages__item advantages__item--eco">
@@ -364,8 +364,10 @@
             </p>
             <ul class="order-form__list list">
               <li class="order-form__item">
-                <label class="order-form__label date-label" for="date">Дата</label>
-                <p class="order-form__tooltip">Введите дату доставки</p>
+                <div class="order-form__container">
+                  <label class="order-form__label date-label" for="date">Дата</label>
+                  <span class="order-form__tooltip date-tooltip"></span>
+                </div>
                 <input class="order-form__input date-input text-input" name="delivery-date" id="date" type="text"
                   onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="01.04.2020">
               </li>
@@ -375,9 +377,11 @@
                   placeholder="+7 800 999-00-00">
               </li>
               <li class="order-form__item">
-                <label class="order-form__label email-label" for="email">Адрес</label>
-                <p class="order-form__tooltip">Введите название улицы, дома и квартиры</p>
-                <input class="order-form__input email-input text-input" name="delivery-email" id="email" type="email"
+                <div class="order-form__container">
+                  <label class="order-form__label address-label" for="address">Адрес</label>
+                  <span class="order-form__tooltip address-tooltip"></span>
+                </div>
+                <input class="order-form__input address-input text-input" name="delivery-address" id="address" type="text"
                   placeholder="ул. Большая Конюшенная, 19/8">
               </li>
             </ul>
