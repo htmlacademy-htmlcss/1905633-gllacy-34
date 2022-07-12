@@ -151,6 +151,7 @@ img {
   color: #2D3440;
   width: 100%;
   position: relative;
+  min-width: 1366px;
 }
 
 .index-body {
@@ -226,13 +227,14 @@ img {
 
 .header-menu__text {
   display: block;
-  height: 36px;
+  min-height: 36px;
   width: fit-content;
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 6px;
   padding-bottom: 8px;
   border-radius: 30px;
+  max-width: 550px;
 }
 
 .header-menu__text:hover {
@@ -269,36 +271,17 @@ img {
   left: 2px;
   z-index: 2;
   border-radius: 4px;
-  padding: 16px;
-  padding-bottom: 6px;
+  padding-top: 10px;
+  padding-bottom: 8px;
   box-shadow: 0 15px 40px #2d34401F;
 }
 
 .dropdown-menu__item {
-  padding-bottom: 8px;
   min-width: 110px;
   position: relative;
 }
 
-.dropdown-menu__item::before {
-  content: "";
-  width: 7px;
-  height: 28px;
-  position: absolute;
-  top: 0;
-  left: -7px;
-  background-color: #FCFCFC;
-}
-
-.dropdown-menu__item:first-of-type:before {
-  height: 33px;
-}
-
 .dropdown-menu__item:not(.dropdown-menu__item--current):hover {
-  background-color: #FFCBD8;
-}
-
-.dropdown-menu__item:not(.dropdown-menu__item--current):hover::before {
   background-color: #FFCBD8;
 }
 
@@ -315,16 +298,6 @@ img {
 
 .dropdown-menu__item--current .dropdown-menu__text {
   color: #FCFCFC;
-}
-
-.dropdown-menu__item--current::before {
-  content: "";
-  width: 7px;
-  height: 28px;
-  position: absolute;
-  top: 0;
-  left: -7px;
-  background-color: #FF4A78;
 }
 
 .dropdown-menu__item:last-of-type {
@@ -344,7 +317,10 @@ img {
   color: #2D3440;
   margin: 0;
   white-space: nowrap;
-  margin-top: 4px;
+  min-height: 32px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 16px;
 }
 
 .dropdown-menu__item--highlighted .dropdown-menu__text {
@@ -354,9 +330,10 @@ img {
   font-weight: 700;
   color: #2D3440;
   margin: 0;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #B9B9B9;
-  margin-bottom: 9px;
+  padding-bottom: 16px;
+  background-image: url("../images/menu-splitter.svg");
+  background-repeat: no-repeat;
+  background-position: 16px 37px;
 }
 
 .header__popup-container {
@@ -455,12 +432,21 @@ img {
   color: #2D3440;
 }
 
+.search-popup__input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  background-image: url("../images/search-cross.svg");
+  opacity: 0.4;
+  margin-right: 15px;
+}
+
 .search-popup__input::placeholder {
   color: #B9B9B9;
 }
 
 .header__login-container {
-  width: 88px;
+  min-width: 88px;
   height: fit-content;
   background-image: url("../images/login-icon.svg");
   background-repeat: no-repeat;
@@ -498,8 +484,8 @@ img {
 
 .header__login-button {
   display: block;
-  width: 88px;
-  height: 32px;
+  min-width: 88px;
+  min-height: 32px;
   padding-top: 5px;
   padding-right: 16px;
   cursor: pointer;
@@ -625,10 +611,9 @@ img {
 }
 
 .header__basket-button {
-  white-space: nowrap;
   display: block;
-  width: 115px;
-  height: 31px;
+  min-width: 115px;
+  min-height: 31px;
   padding-top: 5px;
   padding-right: 16px;
   cursor: pointer;
@@ -1218,7 +1203,7 @@ img {
   margin-right: auto;
   margin-bottom: 16px;
   margin-top: 0;
-  color: #2D3440;
+  color: #565C66;
 }
 
 .shop__price-container {
@@ -1319,6 +1304,7 @@ img {
 
 .advantages__description {
   margin: 0;
+  color: #565C66;
 }
 
 .advantages__item--techno {
@@ -1375,6 +1361,7 @@ img {
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 14px;
+  color: #565C66;
 }
 
 .blog__caption {
@@ -1415,6 +1402,7 @@ img {
   line-height: 22px;
   font-weight: 400;
   margin-bottom: 42px;
+  color: #565C66;
 }
 
 .subscription__email {
@@ -1465,6 +1453,7 @@ img {
   line-height: 22px;
   font-weight: 400;
   width: 371px;
+  color: #565C66;
 }
 
 .order-form {
@@ -1484,6 +1473,7 @@ img {
   width: 380px;
   margin-bottom: 32px;
   margin-top: 0;
+  color: #565C66;
 }
 
 .order-form__list {
@@ -1497,6 +1487,12 @@ img {
   position: relative;
 }
 
+.order-form__container {
+  display: flex;
+  align-items: baseline;
+  gap: 0 5px;
+}
+
 .order-form__label {
   display: block;
   font-style: inherit;
@@ -1507,6 +1503,16 @@ img {
 }
 
 .order-form__tooltip {
+  position: relative;
+  width: 14px;
+  height: 18px;
+  background-image: url("../images/info.svg");
+  background-repeat: no-repeat;
+  background-position: 0 5px;
+}
+
+.order-form__tooltip::before {
+  content: "Введите дату доставки";
   opacity: 0;
   font-style: inherit;
   font-size: 12px;
@@ -1519,35 +1525,61 @@ img {
   background-color: #FFFFFF;
   outline: 2px solid #B9B9B9;
   position: absolute;
-  top: -11px;
-  left: 71px;
+  top: -4px;
+  left: 27px;
   z-index: 2;
   white-space: pre-line;
   border-radius: 1px;
 }
 
-.order-form__item:last-of-type .order-form__tooltip {
-  left: 83px;
+.order-form__item:last-of-type .order-form__tooltip::before {
+  content: "Введите название улицы, дома и квартиры";
 }
 
-.date-label:hover ~ .order-form__tooltip {
-  opacity: 100%;
-}
-
-.email-label:hover ~ .order-form__tooltip {
-  opacity: 100%;
-}
-
-.order-form__tooltip::before {
+.order-form__tooltip::after {
+  opacity: 0;
   content: "";
   width: 32px;
   height: 20px;
   position: absolute;
-  top: 11px;
-  left: -11px;
+  top: 2px;
+  left: 16px;
   background-image: url("../images/tooltip-arrow.svg");
   background-repeat: no-repeat;
   background-size: 13px 20px;
+  z-index: 3;
+}
+
+.date-label:hover ~ .date-tooltip::before {
+  opacity: 100%;
+}
+
+.date-label:hover ~ .date-tooltip::after {
+  opacity: 100%;
+}
+
+.address-label:hover ~ .address-tooltip::before {
+  opacity: 100%;
+}
+
+.address-label:hover ~ .address-tooltip::after {
+  opacity: 100%;
+}
+
+.date-tooltip:hover ~ .date-tooltip::before {
+  opacity: 100%;
+}
+
+.date-tooltip:hover ~ .date-tooltip::after {
+  opacity: 100%;
+}
+
+.address-tooltip:hover ~ .address-tooltip::before {
+  opacity: 100%;
+}
+
+.address-tooltip:hover ~ .address-tooltip::after {
+  opacity: 100%;
 }
 
 .order-form__input {
@@ -1561,12 +1593,6 @@ img {
   display: block;
 }
 
-.date-label {
-  background-image: url("../images/info.svg");
-  background-repeat: no-repeat;
-  background-position: 44px;
-}
-
 .date-input {
   width: 117px;
 }
@@ -1575,13 +1601,7 @@ img {
   width: 287px;
 }
 
-.email-label {
-  background-image: url("../images/info.svg");
-  background-repeat: no-repeat;
-  background-position: 57px;
-}
-
-.email-input {
+.address-input {
   width: 420px;
 }
 
@@ -1618,6 +1638,7 @@ img {
   line-height: 22px;
   font-weight: 400;
   margin-bottom: 12px;
+  color: #565C66;
 }
 
 .contacts__address-description {
@@ -1640,6 +1661,7 @@ img {
   line-height: 22px;
   font-weight: 400;
   margin-bottom: 12px;
+  color: #565C66;
 }
 
 .contacts__phone-description {
@@ -1657,6 +1679,7 @@ img {
   line-height: 20px;
   font-weight: 400;
   margin-bottom: 32px;
+  color: #565C66;
 }
 
 .footer {
@@ -1904,9 +1927,12 @@ img {
   flex-wrap: nowrap;
   min-width: fit-content;
   padding: 8px 24px 8px 32px;
-  height: 36px;
+  min-height: 36px;
   border-radius: 20px;
   background-color: #FCFCFC66;
+  max-width: 830px;
+  flex-wrap: wrap;
+  gap: 5px 0;
 }
 
 .fat__item {
@@ -1983,12 +2009,14 @@ img {
 
 .fill__list {
   display: flex;
-  flex-wrap: nowrap;
   min-width: fit-content;
   padding: 10px 24px 8px 32px;
-  height: 40px;
+  min-height: 40px;
   border-radius: 20px;
   background-color: #FCFCFC66;
+  max-width: 830px;
+  flex-wrap: wrap;
+  gap: 5px 0;
 }
 
 .fill__item {
